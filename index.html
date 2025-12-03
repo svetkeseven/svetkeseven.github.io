@@ -9,184 +9,283 @@
 
 <html class="theme-blood" lang="en" data-theme="blood">
 
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- Page Title - Change this to your name/brand (50-60 characters recommended) -->
-    <title>SvekteSeven</title>
-    <link rel="icon" type="image/x-icon" href="https://preview.redd.it/5qy0rty0gjy91.png?width=640&crop=smart&auto=webp&s=adc24f5de2ac036321d641095619bf9ad56200b9"> <!-- Restored previous favicon -->
+  <!-- Page Title - Change this to your name/brand (50-60 characters recommended) -->
+  <title>SvekteSeven</title>
+  <link rel="icon" type="image/x-icon"
+    href="https://preview.redd.it/5qy0rty0gjy91.png?width=640&crop=smart&auto=webp&s=adc24f5de2ac036321d641095619bf9ad56200b9">
+  <!-- Restored previous favicon -->
 
-    <!-- Meta Description - Write a description (150-160 characters recommended) -->
-    <meta name="description" content="Replace this with your own, this appears in search results and when sharing.">
+  <!-- Meta Description - Write a description (150-160 characters recommended) -->
+  <meta name="description" content="Replace this with your own, this appears in search results and when sharing.">
 
-    <!-- Keywords -->
-    <meta name="keywords" content="your name, industry, and specialties">
+  <!-- Keywords -->
+  <meta name="keywords" content="your name, industry, and specialties">
 
-    <!-- Canonical URL - Helps prevent duplicate content issues -->
-    <meta rel="canonical" href="https://yourwebsite.com">
+  <!-- Canonical URL - Helps prevent duplicate content issues -->
+  <meta rel="canonical" href="https://yourwebsite.com">
 
-    <!-- Author Information -->
-    <meta name="author" content="Your Name">
+  <!-- Author Information -->
+  <meta name="author" content="Your Name">
 
-    <!-- Stylesheets -->
-    <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/brands.css">
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/brands.css">
 
-    <!-- LittleLink Extended Stylesheet (Optional) -->
-    <!-- <link rel="stylesheet" href="css/brands-extended.css"> -->
-    <!-- Learn more at https://github.com/sethcottle/littlelink-extended.
+  <!-- Google Fonts: Outfit -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+
+  <!-- LittleLink Extended Stylesheet (Optional) -->
+  <!-- <link rel="stylesheet" href="css/brands-extended.css"> -->
+  <!-- Learn more at https://github.com/sethcottle/littlelink-extended.
          Remove comments if you've added LittleLink Extended dependencies -->
 
-  </head>
+</head>
 
 <body>
-    <!-- Advanced Theme Switcher with Auto-Collapse -->
-    <div class="theme-switcher">
-      <button class="theme-btn" data-theme="blood" aria-label="Blood Red & Black Theme" title="Blood Red & Black">
-        <svg viewBox="0 0 24 24"><path d="M12 2c-5.5 0-10 4.5-10 10s4.5 10 10 10 10-4.5 10-10-4.5-10-10-10m0 18c-4.4 0-8-3.6-8-8s3.6-8 8-8 8 3.6 8 8-3.6 8-8 8m.5-13h-1v6l5.2 3.2.7-1.1-4.9-2.9v-5.2z"/></svg>
-      </button>
-      <button class="theme-btn" data-theme="dark" aria-label="Dark Theme" title="Dark">
-        <svg viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
-      </button>
-      <button class="theme-btn" data-theme="light" aria-label="Light Theme" title="Light">
-        <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
-      </button>
-      <button class="theme-btn toggle-btn" aria-label="Toggle Theme Switcher" aria-expanded="false">
-        <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
-      </button>
-    </div>
+  <!-- Custom Cursor -->
+  <div class="cursor-dot" data-cursor-dot></div>
+  <div class="cursor-outline" data-cursor-outline></div>
+
+  <!-- Loader -->
+  <div class="loader">
+    <div class="loader-spinner"></div>
+  </div>
+
+  <!-- Share Button -->
+  <button class="share-btn" aria-label="Share Profile" title="Share Profile">
+    <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none"
+      stroke-linecap="round" stroke-linejoin="round">
+      <circle cx="18" cy="5" r="3"></circle>
+      <circle cx="6" cy="12" r="3"></circle>
+      <circle cx="18" cy="19" r="3"></circle>
+      <line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line>
+      <line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line>
+    </svg>
+  </button>
+
+  <!-- Advanced Theme Switcher with Auto-Collapse -->
+  <div class="theme-switcher">
+    <button class="theme-btn" data-theme="blood" aria-label="Blood Red & Black Theme" title="Blood Red & Black">
+      <svg viewBox="0 0 24 24">
+        <path
+          d="M12 2c-5.5 0-10 4.5-10 10s4.5 10 10 10 10-4.5 10-10-4.5-10-10-10m0 18c-4.4 0-8-3.6-8-8s3.6-8 8-8 8 3.6 8 8-3.6 8-8 8m.5-13h-1v6l5.2 3.2.7-1.1-4.9-2.9v-5.2z" />
+      </svg>
+    </button>
+    <button class="theme-btn" data-theme="dark" aria-label="Dark Theme" title="Dark">
+      <svg viewBox="0 0 24 24">
+        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+      </svg>
+    </button>
+    <button class="theme-btn" data-theme="light" aria-label="Light Theme" title="Light">
+      <svg viewBox="0 0 24 24">
+        <circle cx="12" cy="12" r="5" />
+        <line x1="12" y1="1" x2="12" y2="3" />
+        <line x1="12" y1="21" x2="12" y2="23" />
+        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
+        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
+        <line x1="1" y1="12" x2="3" y2="12" />
+        <line x1="21" y1="12" x2="23" y2="12" />
+        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
+        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
+      </svg>
+    </button>
+    <button class="theme-btn toggle-btn" aria-label="Toggle Theme Switcher" aria-expanded="false">
+      <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true">
+        <path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+          stroke-linejoin="round" fill="none" />
+      </svg>
+    </button>
+  </div>
 
 
-    <div class="container">
-        <div class="column">
+  <div class="container">
+    <div class="column">
 
-            <!--
-              By default, the Avatar is rounded. Use the following:
-              - avatar--rounded: Automatically rounds the image
-              - avatar--soft: Slightly rounds the image
-              - avatar--none: Removes any rounding
+      <!-- Avatar - Choose rounding style -->
+      <img class="avatar avatar--rounded" src="https://i.pinimg.com/736x/a7/38/c3/a738c35a280160410ee4836e8a969aa8.jpg"
+        alt="LittleLink" loading="lazy">
 
-              Be sure to replace the src with your own image path and update the alt text
-            -->
-            <img class="avatar avatar--rounded" src="https://i.pinimg.com/736x/a7/38/c3/a738c35a280160410ee4836e8a969aa8.jpg" alt="LittleLink">
+      <!-- Name/Brand with Glitch Effect -->
+      <div class="glitch-wrapper">
+        <h1 class="glitch" data-text="SvekteSeven">SvekteSeven</h1>
+      </div>
 
-            <!-- Replace with your name or brand -->
-            <h1>
-              <div>SvekteSeven</div>
-            </h1>
+      <!-- Portfolio Section -->
+      <p style="font-weight: 600; color: var(--accent-color);">Portfólio:</p>
+      <div id="portfolio-links" class="button-stack" role="navigation">
+        <!-- YouTube Music -->
+        <a class="button button-yt button--disabled" href="#" aria-disabled="true" target="_blank" rel="noopener"
+          role="button"><img class="icon" aria-hidden="true" src="images/icons/youtube-music.svg" alt="YouTube Logo"
+            loading="lazy">Portifólio de Dublagens</a>
 
-                        <p style="font-weight: 600; color: var(--accent-color);">Links de portifólio abaixo:</p>
-                        <!-- Portfolio links grouped for ordering -->
-                        <div id="portfolio-links" class="button-stack" role="navigation">
-                          <!-- Dublagens -->
-                          <a class="button button-yt button--disabled" href="#" aria-disabled="true" target="_blank" rel="noopener" role="button"><img class="icon" aria-hidden="true" src="images/icons/youtube-music.svg" alt="YouTube Logo">Portifólio de Dublagens</a>
+        <!-- Google Drive -->
+        <a class="button button-google-black button--disabled" href="#" aria-disabled="true" target="_blank"
+          rel="noopener" role="button"><img class="icon" aria-hidden="true" src="images/icons/google-drive.svg"
+            alt="Google Drive Logo" loading="lazy">Dublagens (Drive Direto)</a>
+      </div>
 
-                          <!-- Google Drive -->
-                          <a class="button button-google-black button--disabled" href="#" aria-disabled="true" target="_blank" rel="noopener" role="button"><img class="icon" aria-hidden="true" src="images/icons/google-drive.svg" alt="Google Drive Logo">Dublagens (Drive Direto)</a>
-                        </div>
+      <!-- Contact Section -->
+      <p style="font-weight: 600; color: var(--accent-color);">Links para contato abaixo:</p>
+      <div id="contact-links" class="button-stack" role="navigation">
 
- 
-            <!-- Add a short description about yourself or your brand -->
-            <p style="font-weight: 600; color: var(--accent-color);">Links para contato abaixo:</p>
+        <!-- Default LittleLink -->
+        <a class="button button-default button--disabled" href="#" aria-disabled="true" target="_blank" rel="noopener"
+          role="button"><img class="icon" aria-hidden="true" src="images/icons/littlelink.svg" alt="LittleLink Logo"
+            loading="lazy">LittleLink</a>
 
-            <!-- All your buttons go here -->
-            <div id="contact-links" class="button-stack" role="navigation">
+        <!-- Bluesky Alt -->
+        <a class="button button-bluesky-alt" href="https://bsky.app/profile/did:plc:rdedejocimir7ubc5to5siu2"
+          target="_blank" rel="noopener" role="button"><img class="icon" aria-hidden="true"
+            src="images/icons/bluesky-alt.svg" alt="Bluesky Logo" loading="lazy">Bluesky</a>
 
-              <!-- Default LittleLink -->
-              <a class="button button-default button--disabled" href="#" aria-disabled="true" target="_blank" rel="noopener" role="button"><img class="icon" aria-hidden="true" src="images/icons/littlelink.svg" alt="LittleLink Logo">LittleLink</a>
+        <!-- Dev.to -->
+        <a class="button button-dev-to button--disabled" href="#" aria-disabled="true" target="_blank" rel="noopener"
+          role="button"><img class="icon" aria-hidden="true" src="images/icons/dev-to.svg" alt="Dev.to Logo"
+            loading="lazy">Dev.to</a>
 
-              <!-- Bluesky Alt -->
-              <a class="button button-bluesky-alt button--disabled" href="#" aria-disabled="true" target="_blank" rel="noopener" role="button"><img class="icon" aria-hidden="true" src="images/icons/bluesky-alt.svg" alt="Bluesky Logo">Bluesky</a>
+        <!-- Discord -->
+        <a class="button button-discord button--disabled" href="#" aria-disabled="true" target="_blank" rel="noopener"
+          role="button"><img class="icon" aria-hidden="true" src="images/icons/discord.svg" alt="Discord Logo"
+            loading="lazy">Discord</a>
 
-              <!-- Dev.to -->
-              <a class="button button-dev-to button--disabled" href="#" aria-disabled="true" target="_blank" rel="noopener" role="button"><img class="icon" aria-hidden="true" src="images/icons/dev-to.svg" alt="Dev.to Logo">Dev.to</a>
+        <!-- GitHub -->
+        <a class="button button-github" href="https://github.com/CristianoRFB" target="_blank" rel="noopener"
+          role="button"><img class="icon" aria-hidden="true" src="images/icons/github.svg" alt="GitHub Logo"
+            loading="lazy">GitHub</a>
 
-              <!-- Discord -->
-              <a class="button button-discord button--disabled" href="#" aria-disabled="true" target="_blank" rel="noopener" role="button"><img class="icon" aria-hidden="true" src="images/icons/discord.svg" alt="Discord Logo">Discord</a>
+        <!-- Google Play Store -->
+        <a class="button button-playstore button--disabled" href="#" aria-disabled="true" target="_blank" rel="noopener"
+          role="button"><img class="icon" aria-hidden="true" src="images/icons/google-play.svg"
+            alt="Google Play Store Logo" loading="lazy">Google Play Store</a>
 
-              <!-- GitHub -->
-              <a class="button button-github" href="https://github.com/CristianoRFB" target="_blank" rel="noopener" role="button"><img class="icon" aria-hidden="true" src="images/icons/github.svg" alt="GitHub Logo">GitHub</a>
+        <!-- Instagram -->
+        <a class="button button-instagram button--disabled" href="#" aria-disabled="true" target="_blank" rel="noopener"
+          role="button"><img class="icon" aria-hidden="true" src="images/icons/instagram.svg" alt="Instagram Logo"
+            loading="lazy">Instagram</a>
 
-              <!-- Google Play Store -->
-              <a class="button button-playstore button--disabled" href="#" aria-disabled="true" target="_blank" rel="noopener" role="button"><img class="icon" aria-hidden="true" src="images/icons/google-play.svg" alt="Google Play Store Logo">Google Play Store</a>
+        <!-- LinkedIn -->
+        <a class="button button-linked button--disabled" href="#" aria-disabled="true" target="_blank" rel="noopener"
+          role="button"><img class="icon" aria-hidden="true" src="images/icons/linkedin.svg" alt="LinkedIn Logo"
+            loading="lazy">LinkedIn</a>
 
-              <!-- Instagram -->
-              <a class="button button-instagram button--disabled" href="#" aria-disabled="true" target="_blank" rel="noopener" role="button"><img class="icon" aria-hidden="true" src="images/icons/instagram.svg" alt="Instagram Logo">Instagram</a>
+        <!-- OnlyFans -->
+        <a class="button button-onlyfans button--disabled" href="#" aria-disabled="true" target="_blank" rel="noopener"
+          role="button"><img class="icon" aria-hidden="true" src="images/icons/onlyfans.svg" alt="OnlyFans Logo"
+            loading="lazy">OnlyFans (18+)</a>
 
-              <!-- LinkedIn -->
-              <a class="button button-linked button--disabled" href="#" aria-disabled="true" target="_blank" rel="noopener" role="button"><img class="icon" aria-hidden="true" src="images/icons/linkedin.svg" alt="LinkedIn Logo">LinkedIn</a>
+        <!-- Pinterest -->
+        <a class="button button-pinterest" href="https://br.pinterest.com/crisfbueno10/" target="_blank" rel="noopener"
+          role="button"><img class="icon" aria-hidden="true" src="images/icons/pinterest.svg" alt="Pinterest Logo"
+            loading="lazy">Pinterest</a>
 
-              <!-- OnlyFans -->
-              <a class="button button-onlyfans button--disabled" href="#" aria-disabled="true" target="_blank" rel="noopener" role="button"><img class="icon" aria-hidden="true" src="images/icons/onlyfans.svg" alt="OnlyFans Logo">OnlyFans (18+)</a>
+        <!-- Reddit -->
+        <a class="button button-reddit button--disabled" href="#" aria-disabled="true" target="_blank" rel="noopener"
+          role="button"><img class="icon" aria-hidden="true" src="images/icons/reddit.svg" alt="Reddit Logo"
+            loading="lazy">Reddit</a>
 
-              <!-- Pinterest -->
-              <a class="button button-pinterest" href="https://br.pinterest.com/crisfbueno10/" target="_blank" rel="noopener" role="button"><img class="icon" aria-hidden="true" src="images/icons/pinterest.svg" alt="Pinterest Logo">Pinterest</a>
+        <!-- Snapchat -->
+        <a class="button button-snapchat button--disabled" href="#" aria-disabled="true" target="_blank" rel="noopener"
+          role="button"><img class="icon" aria-hidden="true" src="images/icons/snapchat.svg" alt="Snapchat Logo"
+            loading="lazy">Snapchat</a>
 
-              <!-- Reddit -->
-              <a class="button button-reddit button--disabled" href="#" aria-disabled="true" target="_blank" rel="noopener" role="button"><img class="icon" aria-hidden="true" src="images/icons/reddit.svg" alt="Reddit Logo">Reddit</a>
+        <!-- Spotify Alt -->
+        <a class="button button-spotify-alt" href="https://open.spotify.com/user/31cmfte4hzafqchjxmwl5wey7qci"
+          target="_blank" rel="noopener" role="button"><img class="icon" aria-hidden="true"
+            src="images/icons/spotify-alt.svg" alt="Spotify Logo" loading="lazy">Spotify</a>
 
-              <!-- Snapchat -->
-              <a class="button button-snapchat button--disabled" href="#" aria-disabled="true" target="_blank" rel="noopener" role="button"><img class="icon" aria-hidden="true" src="images/icons/snapchat.svg" alt="Snapchat Logo">Snapchat</a>
+        <!-- Steam Alt -->
+        <a class="button button-steam-alt" href="https://steamcommunity.com/profiles/76561199849309966" target="_blank"
+          rel="noopener" role="button"><img class="icon" aria-hidden="true" src="images/icons/steam.svg"
+            alt="Steam Logo" loading="lazy">Steam</a>
 
-              <!-- Spotify Alt -->
-              <a class="button button-spotify-alt" href="https://open.spotify.com/user/31cmfte4hzafqchjxmwl5wey7qci" target="_blank" rel="noopener" role="button"><img class="icon" aria-hidden="true" src="images/icons/spotify-alt.svg" alt="Spotify Logo">Listen on Spotify</a>
+        <!-- Telegram -->
+        <a class="button button-telegram button--disabled" href="#" aria-disabled="true" target="_blank" rel="noopener"
+          role="button"><img class="icon" aria-hidden="true" src="images/icons/telegram.svg" alt="Telegram Logo"
+            loading="lazy">Telegram</a>
 
-              <!-- Steam Alt -->
-              <a class="button button-steam-alt" href="https://steamcommunity.com/profiles/76561199849309966" target="_blank" rel="noopener" role="button"><img class="icon" aria-hidden="true" src="images/icons/steam.svg" alt="Steam Logo">Steam</a>
+        <!-- Threads -->
+        <a class="button button-threads button--disabled" href="#" aria-disabled="true" target="_blank" rel="noopener"
+          role="button"><img class="icon" aria-hidden="true" src="images/icons/threads.svg" alt="Threads Logo"
+            loading="lazy">Threads</a>
 
-              <!-- Telegram -->
-              <a class="button button-telegram button--disabled" href="#" aria-disabled="true" target="_blank" rel="noopener" role="button"><img class="icon" aria-hidden="true" src="images/icons/telegram.svg" alt="Telegram Logo">Telegram</a>
+        <!-- TikTok -->
+        <a class="button button-tiktok" href="https://www.tiktok.com/@svekte.seven.7" target="_blank" rel="noopener"
+          role="button"><img class="icon" aria-hidden="true" src="images/icons/tiktok.svg" alt="TikTok Logo"
+            loading="lazy">TikTok</a>
 
-              <!-- Threads -->
-              <a class="button button-threads button--disabled" href="#" aria-disabled="true" target="_blank" rel="noopener" role="button"><img class="icon" aria-hidden="true" src="images/icons/threads.svg" alt="Threads Logo">Threads</a>
+        <!-- Twitch -->
+        <a class="button button-twitch" href="https://www.twitch.tv/bnadarlinglv" target="_blank" rel="noopener"
+          role="button"><img class="icon" aria-hidden="true" src="images/icons/twitch.svg" alt="Twitch Logo"
+            loading="lazy">Twitch</a>
 
-              <!-- TikTok -->
-              <a class="button button-tiktok" href="https://www.tiktok.com/@s77_cy" target="_blank" rel="noopener" role="button"><img class="icon" aria-hidden="true" src="images/icons/tiktok.svg" alt="TikTok Logo">TikTok</a>
+        <!-- WhatsApp -->
+        <a class="button button-whatsapp" href="https://wa.me/5517996543360" target="_blank" rel="noopener"
+          role="button"><img class="icon" aria-hidden="true" src="images/icons/whatsapp.svg" alt="WhatsApp Logo"
+            loading="lazy">WhatsApp</a>
 
-              <!-- Twitch -->
-              <a class="button button-twitch" href="https://www.twitch.tv/bnadarlinglv" target="_blank" rel="noopener" role="button"><img class="icon" aria-hidden="true" src="images/icons/twitch.svg" alt="Twitch Logo">Twitch</a>
+        <!-- X -->
+        <a class="button button-x button--disabled" href="#" aria-disabled="true" target="_blank" rel="noopener"
+          role="button"><img class="icon" aria-hidden="true" src="images/icons/x.svg" alt="X Logo" loading="lazy">Follow
+          on X</a>
 
-              <!-- WhatsApp -->
-              <a class="button button-whatsapp" href="https://wa.me/5517996543360" target="_blank" rel="noopener" role="button"><img class="icon" aria-hidden="true" src="images/icons/whatsapp.svg" alt="WhatsApp Logo">WhatsApp</a>
+        <!-- MyAnimeList -->
+        <a class="button button-myanimelist" href="https://myanimelist.net/profile/svetke" target="_blank"
+          rel="noopener" role="button"><img class="icon" aria-hidden="true" src="images/icons/generic-website.svg"
+            alt="MyAnimeList" loading="lazy">MyAnimeList</a>
 
-              <!-- X -->
-              <a class="button button-x button--disabled" href="#" aria-disabled="true" target="_blank" rel="noopener" role="button"><img class="icon" aria-hidden="true" src="images/icons/x.svg" alt="X Logo">Follow on X</a>
+        <!-- YouTube Music -->
+        <a class="button button-yt button--disabled" href="#" aria-disabled="true" target="_blank" rel="noopener"
+          role="button"><img class="icon" aria-hidden="true" src="images/icons/youtube-music.svg"
+            alt="YouTube Music Logo" loading="lazy">Listen on YouTube Music</a>
 
-              <!-- MyAnimeList -->
-              <a class="button button-myanimelist" href="https://myanimelist.net/profile/svetke" target="_blank" rel="noopener" role="button"><img class="icon" aria-hidden="true" src="images/icons/generic-website.svg" alt="MyAnimeList">MyAnimeList</a>
+        <!-- Generic Code -->
+        <a class="button button-default button--disabled" href="#" aria-disabled="true" target="_blank" rel="noopener"
+          role="button"><img class="icon" aria-hidden="true" src="images/icons/generic-code.svg" alt="Code Icon"
+            loading="lazy">View the code</a>
 
-              <!-- YouTube Music -->
-              <a class="button button-yt button--disabled" href="#" aria-disabled="true" target="_blank" rel="noopener" role="button"><img class="icon" aria-hidden="true" src="images/icons/youtube-music.svg" alt="YouTube Music Logo">Listen on YouTube Music</a>
+        <!-- Generic Computer -->
+        <a class="button button-default button--disabled" href="#" aria-disabled="true" target="_blank" rel="noopener"
+          role="button"><img class="icon" aria-hidden="true" src="images/icons/generic-computer.svg" alt="Computer Icon"
+            loading="lazy">Homelab Setup</a>
 
-              <!-- Generic Code -->
-              <a class="button button-default button--disabled" href="#" aria-disabled="true" target="_blank" rel="noopener" role="button"><img class="icon" aria-hidden="true" src="images/icons/generic-code.svg" alt="Code Icon">View the code</a>
+        <!-- Generic Email -->
+        <a class="button button-default button--disabled" href="#" aria-disabled="true" target="_blank" rel="noopener"
+          role="button"><img class="icon" aria-hidden="true" src="images/icons/generic-email.svg" alt="Email Icon"
+            loading="lazy">Email Us</a>
 
-              <!-- Generic Computer -->
-              <a class="button button-default button--disabled" href="#" aria-disabled="true" target="_blank" rel="noopener" role="button"><img class="icon" aria-hidden="true" src="images/icons/generic-computer.svg" alt="Computer Icon">Homelab Setup</a>
+        <!-- Generic Email Alt -->
+        <a class="button button-default button--disabled" href="#" aria-disabled="true" target="_blank" rel="noopener"
+          role="button"><img class="icon" aria-hidden="true" src="images/icons/generic-email-alt.svg" alt="Email Icon"
+            loading="lazy">Email Us</a>
 
-              <!-- Generic Email -->
-              <a class="button button-default button--disabled" href="#" aria-disabled="true" target="_blank" rel="noopener" role="button"><img class="icon" aria-hidden="true" src="images/icons/generic-email.svg" alt="Email Icon">Email Us</a>
+        <!-- Generic Homepage -->
+        <a class="button button-default button--disabled" href="#" aria-disabled="true" target="_blank" rel="noopener"
+          role="button"><img class="icon" aria-hidden="true" src="images/icons/generic-homepage.svg" alt="Homepage Icon"
+            loading="lazy">Visit Homepage</a>
 
-              <!-- Generic Email Alt -->
-              <a class="button button-default button--disabled" href="#" aria-disabled="true" target="_blank" rel="noopener" role="button"><img class="icon" aria-hidden="true" src="images/icons/generic-email-alt.svg" alt="Email Icon">Email Us</a>
+        <!-- Generic SMS -->
+        <a class="button button-default button--disabled" href="#" aria-disabled="true" target="_blank" rel="noopener"
+          role="button"><img class="icon" aria-hidden="true" src="images/icons/generic-sms.svg" alt="SMS Icon"
+            loading="lazy">Send us a message</a>
 
-              <!-- Generic Homepage -->
-              <a class="button button-default button--disabled" href="#" aria-disabled="true" target="_blank" rel="noopener" role="button"><img class="icon" aria-hidden="true" src="images/icons/generic-homepage.svg" alt="Homepage Icon">Visit Homepage</a>
-
-              <!-- Generic SMS -->
-              <a class="button button-default button--disabled" href="#" aria-disabled="true" target="_blank" rel="noopener" role="button"><img class="icon" aria-hidden="true" src="images/icons/generic-sms.svg" alt="SMS Icon">Send us a message</a>
-
-              <!-- Generic Website -->
-              <a class="button button-default button--disabled" href="#" aria-disabled="true" target="_blank" rel="noopener" role="button"><img class="icon" aria-hidden="true" src="images/icons/generic-website.svg" alt="Website Icon">Visit Website</a>
+        <!-- Generic Website -->
+        <a class="button button-default button--disabled" href="#" aria-disabled="true" target="_blank" rel="noopener"
+          role="button"><img class="icon" aria-hidden="true" src="images/icons/generic-website.svg" alt="Website Icon"
+            loading="lazy">Visit Website</a>
 
       </div>
 
-      <!-- Feel free to add your own footer information, including updating `privacy.html` to reflect how your LittleLink fork is set up -->
+      <!-- Footer -->
       <footer>
         Não fique impressionado, isso nem foi tão dificil de programar
-         SvekteSeven - 02/12/2025 
+        SvekteSeven - 02/12/2025
       </footer>
 
     </div>
@@ -195,7 +294,14 @@
   <!-- Decorative banner that blends with the page background and fades into the text -->
   <div class="page-banner" aria-hidden="true"></div>
 
-  <!-- Advanced Theme System Script with Auto-Collapse -->
+  <!-- Loader Script -->
+  <script src="scripts/loader.js"></script>
+  <!-- Effects Script -->
+  <script src="scripts/effects.js"></script>
+  <!-- Cursor Script -->
+  <script src="scripts/cursor.js"></script>
+
+  <!-- Advanced Theme Switcher with Auto-Collapse -->
   <script>
     let collapseTimeout;
     const switcher = document.querySelector('.theme-switcher');
@@ -206,7 +312,7 @@
       const html = document.documentElement;
       html.setAttribute('class', `theme-${saved}`);
       html.setAttribute('data-theme', saved);
-      
+
       document.querySelectorAll('.theme-btn:not(.toggle-btn)').forEach(btn => {
         if (btn.getAttribute('data-theme') === saved) {
           btn.classList.add('active');
@@ -217,7 +323,7 @@
     function expandSwitcher() {
       switcher.classList.remove('collapsed');
       clearTimeout(collapseTimeout);
-      
+
       collapseTimeout = setTimeout(() => {
         switcher.classList.add('collapsed');
       }, 5000);
@@ -228,10 +334,10 @@
       html.setAttribute('class', `theme-${theme}`);
       html.setAttribute('data-theme', theme);
       localStorage.setItem('theme', theme);
-      
+
       document.querySelectorAll('.theme-btn:not(.toggle-btn)').forEach(b => b.classList.remove('active'));
       document.querySelector(`[data-theme="${theme}"]`).classList.add('active');
-      
+
       // Sync ARIA states and keyboard tabindex for theme buttons
       document.querySelectorAll('.theme-btn:not(.toggle-btn)').forEach(b => {
         const isActive = b.getAttribute('data-theme') === theme;
@@ -249,14 +355,14 @@
 
     // Theme selection
     document.querySelectorAll('.theme-btn:not(.toggle-btn)').forEach(btn => {
-      btn.addEventListener('click', function() {
+      btn.addEventListener('click', function () {
         const theme = this.getAttribute('data-theme');
         changetheme(theme);
       });
     });
 
     // Toggle button
-    toggleBtn.addEventListener('click', function(e) {
+    toggleBtn.addEventListener('click', function (e) {
       e.stopPropagation();
       const willExpand = switcher.classList.contains('collapsed');
       // Toggle using centralized method so aria is updated
@@ -270,18 +376,16 @@
       }
     });
 
-    // Removed auto-expand on hover: switcher opens only on click (toggle button)
-    
     // Collapse on clicking outside
-    document.addEventListener('click', function(e) {
+    document.addEventListener('click', function (e) {
       if (!switcher.contains(e.target) && switcher.classList.contains('collapsed') === false) {
         // Intentional: keep expanded until user toggles or timeout
       }
     });
 
     /* Sorting portfolio and contact links: active first (alphabetical), then inactive (alphabetical) */
-    (function sortLinkGroups(){
-      function sortLinks(containerSelector){
+    (function sortLinkGroups() {
+      function sortLinks(containerSelector) {
         const container = document.querySelector(containerSelector);
         if (!container) return;
         const links = Array.from(container.querySelectorAll('a.button'));
@@ -289,21 +393,22 @@
 
         const isActive = (a) => !(a.classList.contains('button--disabled') || a.getAttribute('aria-disabled') === 'true');
 
-        const collator = new Intl.Collator(undefined, {sensitivity: 'base', numeric: true});
+        const collator = new Intl.Collator(undefined, { sensitivity: 'base', numeric: true });
 
-        const active = links.filter(isActive).sort((a,b)=> collator.compare(a.textContent.trim(), b.textContent.trim()));
-        const inactive = links.filter(l=>!isActive(l)).sort((a,b)=> collator.compare(a.textContent.trim(), b.textContent.trim()));
+        const active = links.filter(isActive).sort((a, b) => collator.compare(a.textContent.trim(), b.textContent.trim()));
+        const inactive = links.filter(l => !isActive(l)).sort((a, b) => collator.compare(a.textContent.trim(),
+          b.textContent.trim()));
 
         // Rebuild container: active first, then a small separator, then inactive
         container.innerHTML = '';
-        active.forEach(a=> container.appendChild(a));
-        if (inactive.length){
+        active.forEach(a => container.appendChild(a));
+        if (inactive.length) {
           const sep = document.createElement('div');
           sep.className = 'link-separator';
-          sep.setAttribute('aria-hidden','true');
+          sep.setAttribute('aria-hidden', 'true');
           sep.style.height = '0.5rem';
           container.appendChild(sep);
-          inactive.forEach(a=> container.appendChild(a));
+          inactive.forEach(a => container.appendChild(a));
         }
       }
 

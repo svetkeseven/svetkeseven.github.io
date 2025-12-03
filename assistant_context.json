@@ -20,16 +20,42 @@
     "avoid_changes": "Avoid reformatting unrelated files; keep diffs minimal"
   },
   "link_mappings": {
-    "twitch": {"selector": ".button-twitch","href": "https://www.twitch.tv/bnadarlinglv"},
-    "tiktok": {"selector": ".button-tiktok","href": "https://www.tiktok.com/@s77_cy"},
-    "steam": {"selector": ".button-steam-alt","href": "https://steamcommunity.com/profiles/76561199849309966"},
-    "spotify": {"selector": ".button-spotify-alt","href": "https://open.spotify.com/user/31cmfte4hzafqchjxmwl5wey7qci"},
-    "pinterest": {"selector": ".button-pinterest","href": "https://br.pinterest.com/crisfbueno10/"},
-    "youtube": {"selector": ".button-yt-alt","href": "https://www.youtube.com/channel/UCpkDV3Pao95tLkC-TZ9Q2-w"}
-    ,
-    "whatsapp": {"selector": ".button-whatsapp","href": "https://wa.me/5517996543360"},
-    "github": {"selector": ".button-github","href": "https://github.com/CristianoRFB"},
-    "myanimelist": {"selector": ".button-myanimelist","href": "https://myanimelist.net/profile/svetke"}
+    "twitch": {
+      "selector": ".button-twitch",
+      "href": "https://www.twitch.tv/bnadarlinglv"
+    },
+    "tiktok": {
+      "selector": ".button-tiktok",
+      "href": "https://www.tiktok.com/@s77_cy"
+    },
+    "steam": {
+      "selector": ".button-steam-alt",
+      "href": "https://steamcommunity.com/profiles/76561199849309966"
+    },
+    "spotify": {
+      "selector": ".button-spotify-alt",
+      "href": "https://open.spotify.com/user/31cmfte4hzafqchjxmwl5wey7qci"
+    },
+    "pinterest": {
+      "selector": ".button-pinterest",
+      "href": "https://br.pinterest.com/crisfbueno10/"
+    },
+    "youtube": {
+      "selector": ".button-yt-alt",
+      "href": "https://www.youtube.com/channel/UCpkDV3Pao95tLkC-TZ9Q2-w"
+    },
+    "whatsapp": {
+      "selector": ".button-whatsapp",
+      "href": "https://wa.me/5517996543360"
+    },
+    "github": {
+      "selector": ".button-github",
+      "href": "https://github.com/CristianoRFB"
+    },
+    "myanimelist": {
+      "selector": ".button-myanimelist",
+      "href": "https://myanimelist.net/profile/svetke"
+    }
   },
   "modification_log": [
     {
@@ -78,8 +104,7 @@
       ],
       "description": "Major design innovation & readability fixes: (1) Light theme completely redesigned with stronger red accents (#b91c1c) and improved contrast; (2) Container now has glassmorphism with 20px backdrop-filter blur, rounded borders, inset borders, and reveal animation; (3) Avatar enhanced with floating animation (6s), spinning conic-gradient glow, and scale+rotate on hover; (4) Title animation improved with titleSlide entrance + advanced glow pulse; (5) Buttons with rounded 1.25rem corners, enhanced shadows (40px glow), larger ripple effect (350px), and better hover transform; (6) Section titles (.container p) now have animated underline on hover; (7) Button stack with glass-layer background and animation; (8) Icons with 0.5s transitions, 1.25x scale + 15deg rotate + skew; (9) Footer with animation fade-in and text-shadow glow. All animations use cubic-bezier easing for premium feel.",
       "agent": "assistant"
-    }
-    ,
+    },
     {
       "date": "2025-12-02T00:00:05Z",
       "files_changed": [
@@ -89,8 +114,7 @@
       ],
       "description": "Darkened and intensified the blood-red theme variables, strengthened the animated background glow; removed the previously added accessibility toggle element; made the theme switcher open by click only (removed hover auto-open), replaced toggle icon with a clean hamburger, removed the small toggle indicator dot, improved keyboard aria handling and added visual labels when expanded; improved social icon visibility in the light theme with drop-shadow adjustments.",
       "agent": "assistant"
-    }
-    ,
+    },
     {
       "date": "2025-12-02T00:00:06Z",
       "files_changed": [
@@ -100,8 +124,7 @@
       ],
       "description": "Finalized theme-switcher behavior: removed hover expansion, ensured toggle uses aria-expanded and setSwitcherExpanded handles collapse/expand and timeout; refined blood-red palette to be deeper and more saturated, adjusted background radial layers, removed toggle pseudo-dot for cleaner look, improved visibility of icons in light theme.",
       "agent": "assistant"
-    }
-  ],
+    },
     {
       "date": "2025-12-02T12:05:00Z",
       "files_changed": [
@@ -149,7 +172,20 @@
         "css/style.css"
       ],
       "description": "Strong readability fixes for light theme: neutralized dark brand button gradients with background-image: none and forced light linear-gradient; added subtle 8px brand accent dot via ::before pseudo-element using --button-background variable; ensured icon visibility (removed heavy filters, added light drop-shadow); improved hover/focus states with darker gradient and keyboard focus outline."
+    },
+    {
+      "date": "2025-12-03T15:00:00Z",
+      "files_changed": [
+        "index.html",
+        "css/style.css",
+        "scripts/cursor.js",
+        "scripts/effects.js",
+        "assistant_context.json"
+      ],
+      "description": "Major site overhaul: Added 'Outfit' font, custom interactive cursor, 'glitch' title effect, spotlight button hover effects, 3D tilt profile card, native share button, and noise background overlay.",
+      "agent": "assistant"
     }
+  ],
   "conversation_summary": "Conversation summary and ordered change log:\n1. Initial requests: integrate social links and create styled placeholders for missing links; major aesthetic redesign requested; blood-red/black theme desired; light theme readability improvements requested; theme switcher behavior and visuals iteratively refined; accessibility toggle added then removed per user instruction; grouping of links into portfolio and contact stacks requested; sorting planned.\n\n2. Key Implementations (chronological):\n- Added social links and disabled placeholders using `button--disabled` + `aria-disabled` attributes.\n- Implemented 3-theme system (`theme-blood`, `theme-dark`, `theme-light`) via CSS variables and `html` class toggles; added localStorage persistence.\n- Applied glassmorphism container, gradients, animated glows, avatar effects, and premium animations for title and buttons.\n- Theme switcher created and iteratively improved: emoji -> SVG icons, auto-collapse behavior, replaced hover-open with click-only, hamburger toggle, removed small indicator dot, enforced ARIA handling and keyboard navigation.\n- Brand-based button coloring implemented via `css/brands.css` variables (`--button-background`, `--button-text`, `--button-border`) with fallbacks used in `css/style.css`.\n- Accessibility features (skip link and a11y toggle) were added and later removed per user request.\n- Darkened and intensified the blood-red palette, tuned light theme contrast and icon visibility (drop-shadows), and fixed collapsed switcher sizing to be an exact circle (48×48) with GPU rendering hints to avoid subpixel flattening.\n- Grouped links into `#portfolio-links` and `#contact-links` containers in `index.html` to prepare for sorting.\n- Added client-side sorting script to `index.html` that alphabetizes active links first, then inactive links, using `Intl.Collator` and rebuilding the container.\n\n3. Files touched (high-level):\n- `index.html`: added/updated theme switcher markup, click-only toggle behavior, grouped link containers, inserted sorting JS.\n- `css/style.css`: theme variable tuning, glassmorphism, animations, collapsed switcher sizing and rendering hints, light theme contrast fixes.\n- `css/brands.css`: brand color variables used by buttons.\n- `assistant_context.json`: updated modification_log entries and appended this conversation summary and the sorting entry.\n\n4. Pending/Completed items captured in the conversation and reflected in this file:\n- Portfolio/contact grouping: completed.\n- Sorting script: completed and injected into `index.html`.\n- Update of `assistant_context.json`: this update (appended summary and log).\n\n5. Notes for future work:\n- If the collapsed switcher still displays visual flattening on some displays, consider hiding other top-right fixed elements or further forcing even-pixel dimensions and removing transform hacks from parent elements.\n- The separator inserted between active and inactive links is a small `div.link-separator` with height `0.5rem`; CSS styling can be added in `css/style.css` for visual preference.\n",
   "full_conversation_log": {
     "date_collected": "2025-12-02T12:00:00Z",

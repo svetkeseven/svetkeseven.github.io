@@ -1,3 +1,54 @@
+# svetkeseven.github.io
+
+Um site pessoal publicado via GitHub Pages.
+
+## Sobre
+
+Este repositório contém os arquivos do site pessoal (HTML, CSS, imagens e scripts) do usuário. O site é simples, estático e pensado para ser hospedado diretamente pelo GitHub Pages.
+
+## Estrutura
+
+- `index.html` — página principal
+- `css/` — folhas de estilo
+- `images/` — imagens e ícones
+- `scripts/` — scripts auxiliares
+- `docker/` — arquivos para containerização (opcional)
+
+## Como executar localmente
+
+Você pode servir o conteúdo estático localmente de várias formas. Um jeito simples com Python (se instalado):
+
+```powershell
+python -m http.server 8000
+```
+
+Em seguida abra `http://localhost:8000` no navegador.
+
+Se preferir usar Docker (há um `Dockerfile` e `compose.yaml` no diretório `docker/`):
+
+```powershell
+docker compose up --build
+```
+
+## Deploy
+
+O site pode ser publicado via GitHub Pages mantendo o conteúdo na branch `main`. Não são necessárias etapas de build adicionais a menos que você altere a estrutura para usar um gerador estático.
+
+## Contribuição
+
+Pull requests são bem-vindos para correções de conteúdo, layout ou melhorias. Para mudanças significativas, abra uma issue primeiro.
+
+## Remoção do botão de patrocínio (Sponsor)
+
+Este repositório não inclui arquivos de configuração de financiamento públicos (por exemplo, `.github/FUNDING.yml`), portanto o botão "Sponsor" do GitHub não será exibido. Se desejar reativar o suporte no futuro, adicione um arquivo de funding seguindo a documentação do GitHub.
+
+## Licença
+
+Consulte o arquivo `LICENSE.md` para detalhes sobre a licença.
+
+---
+
+Se quiser que eu ajuste este README (por exemplo, incluir screenshots, instruções de build mais detalhadas ou tradução para inglês), diga quais informações adicionar.
 ![Logo](https://cdn.cottle.cloud/GitHub/LittleLink/littlelink.gif)
 
 # LittleLink

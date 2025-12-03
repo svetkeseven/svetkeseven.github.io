@@ -1,4 +1,4 @@
-/*
+﻿/*
 * LittleLink
 * https://littlelink.io
 * Free to use under the MIT license
@@ -6,11 +6,12 @@
 */
 
 /* Advanced Theme System with CSS Variables
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
+â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“ */
 
 /* Blood Red & Black Theme (Default) */
 html.theme-blood {
-	--primary-color: #400000; /* deeper base */
+	--primary-color: #400000;
+	/* deeper base */
 	--primary-light: #6b0000;
 	--primary-glow: #ff2b44;
 	--secondary-color: #070606;
@@ -18,7 +19,8 @@ html.theme-blood {
 	--bg-gradient-end: #120404;
 	--text-primary: #ffffff;
 	--text-secondary: #e6e6e6;
-	--accent-color: #b11212; /* stronger red accent */
+	--accent-color: #b11212;
+	/* stronger red accent */
 	--accent-glow: rgba(177, 18, 18, 0.55);
 	--shadow-color: rgba(64, 0, 0, 0.6);
 	--button-bg: linear-gradient(135deg, #580000 0%, #2a0000 100%);
@@ -70,107 +72,125 @@ html.theme-light {
 }
 
 /* Base Typography Settings
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
+â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“ */
 :root {
-	font-size:16px;
+	font-size: 16px;
 }
 
 /* Grid
-  –––––––––––––––––––––––––––––––––––––––––––––––––– */
-  .container {
-	position:relative;
-	width:100%;
-	max-width:37.5rem;     				/* 600px */
-    text-align:center;
-	margin:0 auto;
-	padding:3rem 1.25rem 0 1.25rem;
-	box-sizing:border-box;
+  â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“ */
+.container {
+	position: relative;
+	width: 100%;
+	max-width: 37.5rem;
+	/* 600px */
+	text-align: center;
+	margin: 0 auto;
+	padding: 3rem 1.25rem 0 1.25rem;
+	box-sizing: border-box;
 	background: var(--glass-bg);
 	backdrop-filter: blur(20px);
 	border-radius: 2rem;
 	border: 1px solid var(--glass-border);
-	box-shadow: 0 8px 32px var(--accent-glow), inset 0 1px 0 rgba(255,255,255,0.2);
+	box-shadow: 0 8px 32px var(--accent-glow), inset 0 1px 0 rgba(255, 255, 255, 0.2);
 	margin-top: 2rem;
 	margin-bottom: 2rem;
 	animation: containerReveal 0.8s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
 	opacity: 0;
-  }
-  
-  /* Light theme container enhancements */
-  html.theme-light .container {
+}
+
+/* Light theme container enhancements */
+html.theme-light .container {
 	box-shadow: 0 12px 32px rgba(127, 29, 29, 0.15), inset 0 1px 1px rgba(127, 29, 29, 0.1);
 	border-color: rgba(127, 29, 29, 0.15);
-  }
-  
-  @keyframes containerReveal {
+}
+
+@keyframes containerReveal {
 	from {
 		opacity: 0;
 		transform: translateY(20px) scale(0.95);
 		filter: blur(10px);
 	}
+
 	to {
 		opacity: 1;
 		transform: translateY(0) scale(1);
 		filter: blur(0);
 	}
-  }
+}
+
 .container-left {
-	position:relative;
-	width:100%;
-	max-width:37.5rem;
-	text-align:left;
-	margin:0 auto;
-	padding:0 1.25rem;
-	box-sizing:border-box;
+	position: relative;
+	width: 100%;
+	max-width: 37.5rem;
+	text-align: left;
+	margin: 0 auto;
+	padding: 0 1.25rem;
+	box-sizing: border-box;
 }
+
 .container-left p {
-	margin-bottom: 1rem;  				/* 16px space between paragraphs */
-  }
+	margin-bottom: 1rem;
+	/* 16px space between paragraphs */
+}
+
 .column {
-	position:center;
-	width:100%;
-	float:center;
-	box-sizing:border-box;
+	position: center;
+	width: 100%;
+	float: center;
+	box-sizing: border-box;
 }
+
 /* For devices larger than 400px */
-  @media (min-width:25rem) {            /* 400px */
-    .container {
-	width:85%;
-	padding-left:0;
-	padding-right:0;
+@media (min-width:25rem) {
+
+	/* 400px */
+	.container {
+		width: 85%;
+		padding-left: 0;
+		padding-right: 0;
+	}
 }
-}/* For devices larger than 550px */
-  @media (min-width:34.375rem) {        /* 550px */
-    .container {
-	width:80%;
-}
-.column,.columns {
-	margin-left:0;
-}
-.column:first-child,.columns:first-child {
-	margin-left:0;
-}
+
+/* For devices larger than 550px */
+@media (min-width:34.375rem) {
+
+	/* 550px */
+	.container {
+		width: 80%;
+	}
+
+	.column,
+	.columns {
+		margin-left: 0;
+	}
+
+	.column:first-child,
+	.columns:first-child {
+		margin-left: 0;
+	}
 }
 
 /* Base Styles
-  –––––––––––––––––––––––––––––––––––––––––––––––––– */
-  body {
-	margin:0;
-	padding:0;
+  â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“ */
+body {
+	margin: 0;
+	padding: 0;
 	background: linear-gradient(135deg, var(--bg-gradient-start) 0%, var(--bg-gradient-end) 100%);
 	color: var(--text-primary);
-	font-family:"Open Sans",system-ui;
-	font-size:1.125rem;     				/* 18px */
-    font-weight:400;
-	line-height:1.6;
-	min-height:100vh;
+	font-family: "Open Sans", system-ui;
+	font-size: 1.125rem;
+	/* 18px */
+	font-weight: 400;
+	line-height: 1.6;
+	min-height: 100vh;
 	position: relative;
 	overflow-x: hidden;
-  }
-  
-  /* Light theme background texture */
-  html.theme-light body::after {
-	
+}
+
+/* Light theme background texture */
+html.theme-light body::after {
+
 	/* Prefer brand variables when present. Use background-color (not shorthand)
 	   so brand `background-image` entries in `brands.css` aren't overridden. */
 	content: '';
@@ -179,71 +199,97 @@ html.theme-light {
 	left: 0;
 	width: 100%;
 	height: 100%;
-	background-image: 
-	  radial-gradient(circle at 20% 80%, rgba(127, 29, 29, 0.03) 0%, transparent 50%),
-	  radial-gradient(circle at 80% 20%, rgba(127, 29, 29, 0.02) 0%, transparent 50%);
+	background-image:
+		radial-gradient(circle at 20% 80%, rgba(127, 29, 29, 0.03) 0%, transparent 50%),
+		radial-gradient(circle at 80% 20%, rgba(127, 29, 29, 0.02) 0%, transparent 50%);
 	pointer-events: none;
 	z-index: -1;
-  }
-  
-  /* Animated background for blood theme */
-  html.theme-blood body::before {
+}
+
+/* Animated background for blood theme */
+html.theme-blood body::before {
 	content: '';
 	position: fixed;
 	top: 0;
 	left: 0;
 	width: 100%;
 	height: 100%;
-	background: radial-gradient(ellipse 80% 80% at 50% 0%, rgba(255, 32, 56, 0.12) 0%, rgba(120,10,10,0.06) 30%, transparent 55%),
-	            radial-gradient(circle at 20% 80%, rgba(120,10,10,0.04) 0%, transparent 50%);
+	background: radial-gradient(ellipse 80% 80% at 50% 0%, rgba(255, 32, 56, 0.12) 0%, rgba(120, 10, 10, 0.06) 30%, transparent 55%),
+		radial-gradient(circle at 20% 80%, rgba(120, 10, 10, 0.04) 0%, transparent 50%);
 	pointer-events: none;
 	animation: bloodPulse 8s ease-in-out infinite;
 	z-index: -1;
-  }
-  
-  @keyframes bloodPulse {
-	0%, 100% { opacity: 0.5; }
-	50% { opacity: 1; }
-  }/* Typography
-  –––––––––––––––––––––––––––––––––––––––––––––––––– */
-  h1 {
-	margin:0 0 0.5rem 0;
-	font-size:3rem;         		/* 48px */
-    font-weight:800;
-	line-height:1;
-	letter-spacing:0;
-	word-wrap:break-word;
-	overflow-wrap:break-word;
-	hyphens:auto;           		/* Delete this to remove automatic hyphen on line break */
 }
+
+@keyframes bloodPulse {
+
+	0%,
+	100% {
+		opacity: 0.5;
+	}
+
+	50% {
+		opacity: 1;
+	}
+}
+
+/* Typography
+  â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“ */
+h1 {
+	margin: 0 0 0.5rem 0;
+	font-size: 3rem;
+	/* 48px */
+	font-weight: 800;
+	line-height: 1;
+	letter-spacing: 0;
+	word-wrap: break-word;
+	overflow-wrap: break-word;
+	hyphens: auto;
+	/* Delete this to remove automatic hyphen on line break */
+}
+
 .container p {
-	margin:0 0 2rem 0;
+	margin: 0 0 2rem 0;
 }
 
 /* Base Typography Settings
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
+â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“ */
 /* Base size - 16px browser default */
 :root {
-  font-size:16px;           /* Using a 1.25 modular scale for typography */
-  --scale-0:1rem;           /* 16px */
-  --scale-1:1.25rem;        /* 20px */
-  --scale-2:1.563rem;       /* 25px */
-  --scale-3:1.953rem;       /* 31px */
-  --scale-4:2.441rem;       /* 39px */
-  --scale-5:3.052rem;       /* 49px */
+	font-size: 16px;
+	/* Using a 1.25 modular scale for typography */
+	--scale-0: 1rem;
+	/* 16px */
+	--scale-1: 1.25rem;
+	/* 20px */
+	--scale-2: 1.563rem;
+	/* 25px */
+	--scale-3: 1.953rem;
+	/* 31px */
+	--scale-4: 2.441rem;
+	/* 39px */
+	--scale-5: 3.052rem;
+	/* 49px */
 
-  /* Spacing units */
-  --spacing-xs:0.5rem;      /* 8px */
-  --spacing-s:1rem;         /* 16px */
-  --spacing-m:1.5rem;       /* 24px */
-  --spacing-l:2rem;         /* 32px */
-  --spacing-xl:3rem;        /* 48px */
-  --spacing-xxl:4rem;       /* 64px */
+	/* Spacing units */
+	--spacing-xs: 0.5rem;
+	/* 8px */
+	--spacing-s: 1rem;
+	/* 16px */
+	--spacing-m: 1.5rem;
+	/* 24px */
+	--spacing-l: 2rem;
+	/* 32px */
+	--spacing-xl: 3rem;
+	/* 48px */
+	--spacing-xxl: 4rem;
+	/* 64px */
 }
 
 /* Avatar */
 .avatar {
-	width: 8rem;             /* 128px */
+	width: 8rem;
+	/* 128px */
 	height: 8rem;
 	border-radius: 50%;
 	object-fit: cover;
@@ -258,14 +304,21 @@ html.theme-light {
 	position: relative;
 	background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
 	animation: avatarFloat 6s ease-in-out infinite;
-  }
-  
-  @keyframes avatarFloat {
-	0%, 100% { transform: translateY(0px); }
-	50% { transform: translateY(-10px); }
-  }
-  
-  .avatar::after {
+}
+
+@keyframes avatarFloat {
+
+	0%,
+	100% {
+		transform: translateY(0px);
+	}
+
+	50% {
+		transform: translateY(-10px);
+	}
+}
+
+.avatar::after {
 	content: '';
 	position: absolute;
 	inset: -8px;
@@ -275,33 +328,39 @@ html.theme-light {
 	transition: opacity 0.5s ease;
 	z-index: -1;
 	animation: spinGlow 8s linear infinite;
-  }
-  
-  @keyframes spinGlow {
-	0% { transform: rotate(0deg); }
-	100% { transform: rotate(360deg); }
-  }
-  
-  .avatar:hover {
+}
+
+@keyframes spinGlow {
+	0% {
+		transform: rotate(0deg);
+	}
+
+	100% {
+		transform: rotate(360deg);
+	}
+}
+
+.avatar:hover {
 	transform: translateY(-16px) scale(1.08) rotateZ(5deg);
 	box-shadow: 0 0 60px var(--accent-glow), 0 16px 40px var(--shadow-color), 0 32px 80px rgba(0, 0, 0, 0.4);
 	border-color: var(--primary-light);
-  }
-  
-  .avatar:hover::after {
+}
+
+.avatar:hover::after {
 	opacity: 0.4;
 	filter: blur(20px);
-  }
+}
 
 /* Typography Scale */
 h1 {
-	margin:0 0 var(--spacing-m) 0;
-	font-size:var(--scale-5);           /* ~49px */
-  	font-weight:900;
-	line-height:1.1;
-	letter-spacing:-0.03em;
-	word-wrap:break-word;
-	overflow-wrap:break-word;
+	margin: 0 0 var(--spacing-m) 0;
+	font-size: var(--scale-5);
+	/* ~49px */
+	font-weight: 900;
+	line-height: 1.1;
+	letter-spacing: -0.03em;
+	word-wrap: break-word;
+	overflow-wrap: break-word;
 	background: linear-gradient(135deg, var(--primary-color), var(--primary-light), var(--primary-glow));
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
@@ -323,8 +382,15 @@ html.theme-light h1 {
 }
 
 @keyframes titleGlowAdvanced {
-	0%, 100% { filter: drop-shadow(0 2px 8px var(--accent-glow)); }
-	50% { filter: drop-shadow(0 8px 20px var(--accent-glow)); }
+
+	0%,
+	100% {
+		filter: drop-shadow(0 2px 8px var(--accent-glow));
+	}
+
+	50% {
+		filter: drop-shadow(0 8px 20px var(--accent-glow));
+	}
 }
 
 @keyframes titleSlide {
@@ -332,40 +398,44 @@ html.theme-light h1 {
 		opacity: 0;
 		transform: translateX(-30px);
 	}
+
 	to {
 		opacity: 1;
 		transform: translateX(0);
 	}
 }
+
 body {
-	font-size:var(--scale-1);           /* 20px */
-  	line-height:1.6;
+	font-size: var(--scale-1);
+	/* 20px */
+	line-height: 1.6;
 }
+
 .container p {
-	margin:0 0 var(--spacing-xl) 0;
-	font-size:var(--scale-1);
-	line-height:1.6;
+	margin: 0 0 var(--spacing-xl) 0;
+	font-size: var(--scale-1);
+	line-height: 1.6;
 }
 
 /* Container spacing */
 .container {
-	padding:var(--spacing-xl) var(--spacing-m) 0 var(--spacing-m);
-	text-align:center;
+	padding: var(--spacing-xl) var(--spacing-m) 0 var(--spacing-m);
+	text-align: center;
 }
 
 /* Footer */
 footer {
-	margin:var(--spacing-xxl) 0;
-    font-size:var(--scale-0);
-    color: var(--text-secondary);
-    border-top: 2px solid var(--border-color);
-    padding: var(--spacing-xl) var(--spacing-m);
-    transition: all 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
-    backdrop-filter: blur(10px);
-    background: linear-gradient(90deg, transparent, var(--accent-glow), transparent);
-    border-radius: 1rem;
-    position: relative;
-    animation: footerFadeIn 1s ease-out 0.5s both;
+	margin: var(--spacing-xxl) 0;
+	font-size: var(--scale-0);
+	color: var(--text-secondary);
+	border-top: 2px solid var(--border-color);
+	padding: var(--spacing-xl) var(--spacing-m);
+	transition: all 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+	backdrop-filter: blur(10px);
+	background: linear-gradient(90deg, transparent, var(--accent-glow), transparent);
+	border-radius: 1rem;
+	position: relative;
+	animation: footerFadeIn 1s ease-out 0.5s both;
 }
 
 @keyframes footerFadeIn {
@@ -373,6 +443,7 @@ footer {
 		opacity: 0;
 		transform: translateY(20px);
 	}
+
 	to {
 		opacity: 1;
 		transform: translateY(0);
@@ -380,239 +451,391 @@ footer {
 }
 
 footer:hover {
-    color: var(--accent-color);
-    border-top-color: var(--accent-color);
-    text-shadow: 0 0 10px var(--accent-glow);
+	color: var(--accent-color);
+	border-top-color: var(--accent-color);
+	text-shadow: 0 0 10px var(--accent-glow);
 }
 
 /* Responsive adjustments */
-@media (max-width:34.375rem) {              /* 550px */
-  h1 {
-	font-size:var(--scale-4);
-}
-body {
-	font-size:var(--scale-0);
-}
-.container p {
-	font-size:var(--scale-0);
-}
-.avatar {
-	margin-bottom:var(--spacing-m);
+@media (max-width:34.375rem) {
+
+	/* 550px */
+	h1 {
+		font-size: var(--scale-4);
 	}
 
-/* Page banner: decorative, blends with background and fades into surrounding content */
-.page-banner {
-	width: 100%;
-	max-width: 37.5rem; /* match container width */
-	height: 12rem; /* 192px default */
-	margin: 0 auto 2rem auto;
-	border-radius: 1.5rem;
-	background-image: url('https://i.pinimg.com/736x/85/70/bd/8570bd80c4c91457fea96e10d9206b5b.jpg');
-	background-size: cover;
-	background-position: center;
-	background-repeat: no-repeat;
-	opacity: 0.95;
-	mix-blend-mode: overlay;
-	filter: saturate(1.05) contrast(1.02) blur(0.6px);
-	box-shadow: 0 12px 40px rgba(0,0,0,0.35), inset 0 1px 0 rgba(255,255,255,0.03);
-	position: relative;
-	overflow: hidden;
-}
+	body {
+		font-size: var(--scale-0);
+	}
 
-.page-banner::after {
-	/* soft gradient mask to fade the top into the background/text */
-	content: '';
-	position: absolute;
-	inset: 0;
-	background: linear-gradient(to top, rgba(0,0,0,0.28), rgba(0,0,0,0.08) 35%, rgba(0,0,0,0) 60%);
-	mix-blend-mode: multiply;
-	pointer-events: none;
-}
+	.container p {
+		font-size: var(--scale-0);
+	}
 
-/* Use mask to smoothly fade into the container area above */
-.page-banner {
-	-webkit-mask-image: linear-gradient(to top, rgba(0,0,0,1), rgba(0,0,0,0.4) 40%, rgba(0,0,0,0) 100%);
-	mask-image: linear-gradient(to top, rgba(0,0,0,1), rgba(0,0,0,0.4) 40%, rgba(0,0,0,0) 100%);
-}
+	.avatar {
+		margin-bottom: var(--spacing-m);
+	}
 
-@media (max-width: 34.375rem) {
+	/* Page banner: decorative, blends with background and fades into surrounding content */
 	.page-banner {
-		height: 10rem;
-		border-radius: 1rem;
+		width: 100%;
+		max-width: 37.5rem;
+		/* match container width */
+		height: 12rem;
+		/* 192px default */
+		margin: 0 auto 2rem auto;
+		border-radius: 1.5rem;
+		background-image: url('https://i.pinimg.com/736x/85/70/bd/8570bd80c4c91457fea96e10d9206b5b.jpg');
+		background-size: cover;
+		background-position: center;
+		background-repeat: no-repeat;
+		opacity: 0.95;
+		mix-blend-mode: overlay;
+		filter: saturate(1.05) contrast(1.02) blur(0.6px);
+		box-shadow: 0 12px 40px rgba(0, 0, 0, 0.35), inset 0 1px 0 rgba(255, 255, 255, 0.03);
+		position: relative;
+		overflow: hidden;
 	}
-}
 
-/* Additional animations: banner float, button entrances, icon wobble, switcher pulse/rotate, separator fade */
+	.page-banner::after {
+		/* soft gradient mask to fade the top into the background/text */
+		content: '';
+		position: absolute;
+		inset: 0;
+		background: linear-gradient(to top, rgba(0, 0, 0, 0.28), rgba(0, 0, 0, 0.08) 35%, rgba(0, 0, 0, 0) 60%);
+		mix-blend-mode: multiply;
+		pointer-events: none;
+	}
 
-@keyframes bannerFloat {
-	0% { transform: translateY(0px) scale(1); filter: saturate(1) contrast(1); }
-	50% { transform: translateY(-6px) scale(1.02); filter: saturate(1.06) contrast(1.03); }
- 100% { transform: translateY(0px) scale(1); filter: saturate(1) contrast(1); }
-}
+	/* Use mask to smoothly fade into the container area above */
+	.page-banner {
+		-webkit-mask-image: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.4) 40%, rgba(0, 0, 0, 0) 100%);
+		mask-image: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.4) 40%, rgba(0, 0, 0, 0) 100%);
+	}
 
-.page-banner {
-	will-change: transform, filter;
-	animation: bannerFloat 12s ease-in-out infinite;
-}
+	@media (max-width: 34.375rem) {
+		.page-banner {
+			height: 10rem;
+			border-radius: 1rem;
+		}
+	}
 
-@keyframes bannerGlow {
-	0% { opacity: 0.08; transform: translateY(0); }
- 50% { opacity: 0.18; transform: translateY(-2px); }
- 100% { opacity: 0.08; transform: translateY(0); }
-}
+	/* Additional animations: banner float, button entrances, icon wobble, switcher pulse/rotate, separator fade */
 
-.page-banner::before {
-	content: '';
-	position: absolute;
-	inset: 0;
-	background: radial-gradient(circle at 50% 30%, rgba(255,255,255,0.02), transparent 30%);
-	pointer-events: none;
-	animation: bannerGlow 10s ease-in-out infinite;
-	mix-blend-mode: screen;
-}
+	@keyframes bannerFloat {
+		0% {
+			transform: translateY(0px) scale(1);
+			filter: saturate(1) contrast(1);
+		}
 
-@keyframes buttonEntrance {
-	0% { opacity: 0; transform: translateY(10px) scale(0.995); }
-	60% { opacity: 1; transform: translateY(-4px) scale(1.002); }
- 100% { opacity: 1; transform: translateY(0) scale(1); }
-}
+		50% {
+			transform: translateY(-6px) scale(1.02);
+			filter: saturate(1.06) contrast(1.03);
+		}
 
-/* staggered entrance for buttons using nth-child delays */
-.button-stack a.button {
-	opacity: 0;
-	transform: translateY(10px);
-	animation: buttonEntrance 660ms cubic-bezier(0.22,1,0.36,1) both;
-}
-.button-stack a.button:nth-child(1) { animation-delay: 0.04s; }
-.button-stack a.button:nth-child(2) { animation-delay: 0.08s; }
-.button-stack a.button:nth-child(3) { animation-delay: 0.12s; }
-.button-stack a.button:nth-child(4) { animation-delay: 0.16s; }
-.button-stack a.button:nth-child(5) { animation-delay: 0.20s; }
-.button-stack a.button:nth-child(6) { animation-delay: 0.24s; }
-.button-stack a.button:nth-child(7) { animation-delay: 0.28s; }
-.button-stack a.button:nth-child(8) { animation-delay: 0.32s; }
-.button-stack a.button:nth-child(9) { animation-delay: 0.36s; }
-.button-stack a.button:nth-child(10) { animation-delay: 0.40s; }
-.button-stack a.button:nth-child(11) { animation-delay: 0.44s; }
-.button-stack a.button:nth-child(12) { animation-delay: 0.48s; }
-.button-stack a.button:nth-child(13) { animation-delay: 0.52s; }
-.button-stack a.button:nth-child(14) { animation-delay: 0.56s; }
-.button-stack a.button:nth-child(15) { animation-delay: 0.60s; }
-.button-stack a.button:nth-child(16) { animation-delay: 0.64s; }
+		100% {
+			transform: translateY(0px) scale(1);
+			filter: saturate(1) contrast(1);
+		}
+	}
 
-/* icon wobble on hover */
-@keyframes iconWobble {
-	0% { transform: rotate(0deg) translateY(0); }
- 25% { transform: rotate(-6deg) translateY(-2px); }
- 50% { transform: rotate(4deg) translateY(0); }
- 75% { transform: rotate(-2deg) translateY(-1px); }
- 100% { transform: rotate(0deg) translateY(0); }
-}
-.button .icon { will-change: transform; transition: transform 220ms ease; }
-.button:hover .icon { animation: iconWobble 600ms ease; transform-origin: 50% 50%; }
+	.page-banner {
+		will-change: transform, filter;
+		animation: bannerFloat 12s ease-in-out infinite;
+	}
 
-/* theme switcher animations */
-.theme-switcher:not(.collapsed) .toggle-btn {
-	transform: rotate(14deg) scale(1.02);
-	transition: transform 280ms cubic-bezier(0.22,1,0.36,1);
-}
+	@keyframes bannerGlow {
+		0% {
+			opacity: 0.08;
+			transform: translateY(0);
+		}
 
-@keyframes themePulse {
-	0% { box-shadow: 0 0 0 0 rgba(177,18,18,0.0); }
- 50% { box-shadow: 0 0 12px 6px rgba(177,18,18,0.06); }
- 100% { box-shadow: 0 0 0 0 rgba(177,18,18,0); }
-}
-.theme-btn.active { animation: themePulse 2.4s ease-in-out infinite; }
+		50% {
+			opacity: 0.18;
+			transform: translateY(-2px);
+		}
 
-/* separator fade-in */
-@keyframes sepFade { from { opacity: 0; transform: translateY(4px); } to { opacity: 1; transform: translateY(0); } }
-.link-separator { opacity: 0; animation: sepFade 420ms ease-out 0.18s both; }
+		100% {
+			opacity: 0.08;
+			transform: translateY(0);
+		}
+	}
 
-/* small accessibility: reduce motion respects */
-@media (prefers-reduced-motion: reduce) {
-	.page-banner, .page-banner::before, .button-stack a.button, .theme-btn.active { animation: none !important; transition: none !important; }
-}
+	.page-banner::before {
+		content: '';
+		position: absolute;
+		inset: 0;
+		background: radial-gradient(circle at 50% 30%, rgba(255, 255, 255, 0.02), transparent 30%);
+		pointer-events: none;
+		animation: bannerGlow 10s ease-in-out infinite;
+		mix-blend-mode: screen;
+	}
 
-/* Light theme visibility fixes: improve contrast for text, buttons, icons, and banner */
-html.theme-light {
-	--text-primary: #0b0b0b;
-	--text-secondary: #333333;
-	--button-text: #0b0b0b;
-	--button-bg: linear-gradient(135deg, #ffffff 0%, #f7f7f7 100%);
-	--button-bg-hover: linear-gradient(135deg, #f0f0f0 0%, #e6e6e6 100%);
-	--button-border: 1px solid rgba(0,0,0,0.08);
-	--icon-filter: drop-shadow(0 2px 8px rgba(0,0,0,0.10));
-	--glass-bg: rgba(255,255,255,0.95);
-	--glass-border: rgba(0,0,0,0.06);
-}
+	@keyframes buttonEntrance {
+		0% {
+			opacity: 0;
+			transform: translateY(10px) scale(0.995);
+		}
 
-html.theme-light .container { color: var(--text-primary); }
+		60% {
+			opacity: 1;
+			transform: translateY(-4px) scale(1.002);
+		}
 
-/* Buttons in light theme: darker text, subtle borders and shadows for readability */
-html.theme-light .button {
-	color: var(--button-text);
-	background: var(--button-bg);
-	border: var(--button-border);
-	box-shadow: 0 8px 20px rgba(0,0,0,0.04);
-}
+		100% {
+			opacity: 1;
+			transform: translateY(0) scale(1);
+		}
+	}
 
-html.theme-light .button:hover {
-	background: var(--button-bg-hover);
-	box-shadow: 0 14px 36px rgba(0,0,0,0.06);
-}
+	/* staggered entrance for buttons using nth-child delays */
+	.button-stack a.button {
+		opacity: 0;
+		transform: translateY(10px);
+		animation: buttonEntrance 660ms cubic-bezier(0.22, 1, 0.36, 1) both;
+	}
 
-/* Disabled buttons should still be legible in light theme */
-html.theme-light .button.button--disabled,
-html.theme-light .button[aria-disabled="true"] {
-	opacity: 0.95;
-	color: rgba(0,0,0,0.55);
-	background: linear-gradient(135deg, #fafafa 0%, #f3f3f3 100%);
-	border: 1px dashed rgba(0,0,0,0.06);
-}
+	.button-stack a.button:nth-child(1) {
+		animation-delay: 0.04s;
+	}
 
-/* Icons: remove heavy inversion and add subtle shadow for separation */
-html.theme-light .button .icon {
-	filter: var(--icon-filter);
-	opacity: 1;
-}
+	.button-stack a.button:nth-child(2) {
+		animation-delay: 0.08s;
+	}
 
-/* Theme switcher visibility adjustments */
-html.theme-light .theme-switcher {
-	color: #1f1f1f;
-	background: rgba(255,255,255,0.92);
-	border: 1px solid rgba(0,0,0,0.06);
-	box-shadow: 0 8px 28px rgba(0,0,0,0.06);
-}
+	.button-stack a.button:nth-child(3) {
+		animation-delay: 0.12s;
+	}
 
-html.theme-light .theme-btn svg { stroke: #222; }
+	.button-stack a.button:nth-child(4) {
+		animation-delay: 0.16s;
+	}
 
-/* Banner blending for light theme: use screen/lighten blend and reduce dark overlay */
-html.theme-light .page-banner {
-	mix-blend-mode: screen;
-	filter: saturate(1.02) brightness(1.06) contrast(0.98);
-}
+	.button-stack a.button:nth-child(5) {
+		animation-delay: 0.20s;
+	}
 
-html.theme-light .page-banner::after {
-	background: linear-gradient(to top, rgba(255,255,255,0.6), rgba(255,255,255,0.35) 35%, rgba(255,255,255,0) 60%);
-	mix-blend-mode: normal;
-}
+	.button-stack a.button:nth-child(6) {
+		animation-delay: 0.24s;
+	}
 
-/* Ensure headings and smaller text are readable */
-html.theme-light h1, html.theme-light h2, html.theme-light p { color: var(--text-primary); }
+	.button-stack a.button:nth-child(7) {
+		animation-delay: 0.28s;
+	}
 
-footer {
-	margin:var(--spacing-xl) 0;         	/* 3rem (48px) top and bottom */
-}
+	.button-stack a.button:nth-child(8) {
+		animation-delay: 0.32s;
+	}
+
+	.button-stack a.button:nth-child(9) {
+		animation-delay: 0.36s;
+	}
+
+	.button-stack a.button:nth-child(10) {
+		animation-delay: 0.40s;
+	}
+
+	.button-stack a.button:nth-child(11) {
+		animation-delay: 0.44s;
+	}
+
+	.button-stack a.button:nth-child(12) {
+		animation-delay: 0.48s;
+	}
+
+	.button-stack a.button:nth-child(13) {
+		animation-delay: 0.52s;
+	}
+
+	.button-stack a.button:nth-child(14) {
+		animation-delay: 0.56s;
+	}
+
+	.button-stack a.button:nth-child(15) {
+		animation-delay: 0.60s;
+	}
+
+	.button-stack a.button:nth-child(16) {
+		animation-delay: 0.64s;
+	}
+
+	/* icon wobble on hover */
+	@keyframes iconWobble {
+		0% {
+			transform: rotate(0deg) translateY(0);
+		}
+
+		25% {
+			transform: rotate(-6deg) translateY(-2px);
+		}
+
+		50% {
+			transform: rotate(4deg) translateY(0);
+		}
+
+		75% {
+			transform: rotate(-2deg) translateY(-1px);
+		}
+
+		100% {
+			transform: rotate(0deg) translateY(0);
+		}
+	}
+
+	.button .icon {
+		will-change: transform;
+		transition: transform 220ms ease;
+	}
+
+	.button:hover .icon {
+		animation: iconWobble 600ms ease;
+		transform-origin: 50% 50%;
+	}
+
+	/* theme switcher animations */
+	.theme-switcher:not(.collapsed) .toggle-btn {
+		transform: rotate(14deg) scale(1.02);
+		transition: transform 280ms cubic-bezier(0.22, 1, 0.36, 1);
+	}
+
+	@keyframes themePulse {
+		0% {
+			box-shadow: 0 0 0 0 rgba(177, 18, 18, 0.0);
+		}
+
+		50% {
+			box-shadow: 0 0 12px 6px rgba(177, 18, 18, 0.06);
+		}
+
+		100% {
+			box-shadow: 0 0 0 0 rgba(177, 18, 18, 0);
+		}
+	}
+
+	.theme-btn.active {
+		animation: themePulse 2.4s ease-in-out infinite;
+	}
+
+	/* separator fade-in */
+	@keyframes sepFade {
+		from {
+			opacity: 0;
+			transform: translateY(4px);
+		}
+
+		to {
+			opacity: 1;
+			transform: translateY(0);
+		}
+	}
+
+	.link-separator {
+		opacity: 0;
+		animation: sepFade 420ms ease-out 0.18s both;
+	}
+
+	/* small accessibility: reduce motion respects */
+	@media (prefers-reduced-motion: reduce) {
+
+		.page-banner,
+		.page-banner::before,
+		.button-stack a.button,
+		.theme-btn.active {
+			animation: none !important;
+			transition: none !important;
+		}
+	}
+
+	/* Light theme visibility fixes: improve contrast for text, buttons, icons, and banner */
+	html.theme-light {
+		--text-primary: #0b0b0b;
+		--text-secondary: #333333;
+		--button-text: #0b0b0b;
+		--button-bg: linear-gradient(135deg, #ffffff 0%, #f7f7f7 100%);
+		--button-bg-hover: linear-gradient(135deg, #f0f0f0 0%, #e6e6e6 100%);
+		--button-border: 1px solid rgba(0, 0, 0, 0.08);
+		--icon-filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.10));
+		--glass-bg: rgba(255, 255, 255, 0.95);
+		--glass-border: rgba(0, 0, 0, 0.06);
+	}
+
+	html.theme-light .container {
+		color: var(--text-primary);
+	}
+
+	/* Buttons in light theme: darker text, subtle borders and shadows for readability */
+	html.theme-light .button {
+		color: var(--button-text);
+		background: var(--button-bg);
+		border: var(--button-border);
+		box-shadow: 0 8px 20px rgba(0, 0, 0, 0.04);
+	}
+
+	html.theme-light .button:hover {
+		background: var(--button-bg-hover);
+		box-shadow: 0 14px 36px rgba(0, 0, 0, 0.06);
+	}
+
+	/* Disabled buttons should still be legible in light theme */
+	html.theme-light .button.button--disabled,
+	html.theme-light .button[aria-disabled="true"] {
+		opacity: 0.95;
+		color: rgba(0, 0, 0, 0.55);
+		background: linear-gradient(135deg, #fafafa 0%, #f3f3f3 100%);
+		border: 1px dashed rgba(0, 0, 0, 0.06);
+	}
+
+	/* Icons: remove heavy inversion and add subtle shadow for separation */
+	html.theme-light .button .icon {
+		filter: var(--icon-filter);
+		opacity: 1;
+	}
+
+	/* Theme switcher visibility adjustments */
+	html.theme-light .theme-switcher {
+		color: #1f1f1f;
+		background: rgba(255, 255, 255, 0.92);
+		border: 1px solid rgba(0, 0, 0, 0.06);
+		box-shadow: 0 8px 28px rgba(0, 0, 0, 0.06);
+	}
+
+	html.theme-light .theme-btn svg {
+		stroke: #222;
+	}
+
+	/* Banner blending for light theme: use screen/lighten blend and reduce dark overlay */
+	html.theme-light .page-banner {
+		mix-blend-mode: screen;
+		filter: saturate(1.02) brightness(1.06) contrast(0.98);
+	}
+
+	html.theme-light .page-banner::after {
+		background: linear-gradient(to top, rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.35) 35%, rgba(255, 255, 255, 0) 60%);
+		mix-blend-mode: normal;
+	}
+
+	/* Ensure headings and smaller text are readable */
+	html.theme-light h1,
+	html.theme-light h2,
+	html.theme-light p {
+		color: var(--text-primary);
+	}
+
+	footer {
+		margin: var(--spacing-xl) 0;
+		/* 3rem (48px) top and bottom */
+	}
 }
 
 /* Links
-  –––––––––––––––––––––––––––––––––––––––––––––––––– */
-  a {
-	color:#2457F5;
-	text-decoration:underline;
+  â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“ */
+a {
+	color: #2457F5;
+	text-decoration: underline;
 }
+
 a:hover {
-	color:#083BDA;
+	color: #083BDA;
 }
 
 /* Light theme link colors */
@@ -626,28 +849,33 @@ html.theme-light a:hover {
 }
 
 /* Buttons
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
-.button,button {
-	display:inline-flex;
-	align-items:center;
-	justify-content:center;
-	width:18.75rem;             	/* 300px */
- 	min-height:3rem;                /* 48px */
-  	padding:0.75rem 1rem;         	/* 12px ; 16px */
-  	font-size:1.125rem;           	/* 18px */
-  	font-weight:700;
-	text-decoration:none;
-	white-space:normal;
-  	background-color: var(--button-background, var(--button-bg));
- 	color: var(--button-text, var(--text-primary));
- 	border: var(--button-border, 2px solid var(--accent-color));
-	border-radius:1.25rem;
-	cursor:pointer;
-	box-sizing:border-box;
-	hyphens:auto;
-  	margin-bottom:1rem;
-	text-align:center;
-	line-height:1.3;
+â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“ */
+.button,
+button {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	width: 18.75rem;
+	/* 300px */
+	min-height: 3rem;
+	/* 48px */
+	padding: 0.75rem 1rem;
+	/* 12px ; 16px */
+	font-size: 1.125rem;
+	/* 18px */
+	font-weight: 700;
+	text-decoration: none;
+	white-space: normal;
+	background-color: var(--button-background, var(--button-bg));
+	color: var(--button-text, var(--text-primary));
+	border: var(--button-border, 2px solid var(--accent-color));
+	border-radius: 1.25rem;
+	cursor: pointer;
+	box-sizing: border-box;
+	hyphens: auto;
+	margin-bottom: 1rem;
+	text-align: center;
+	line-height: 1.3;
 	transition: all 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
 	box-shadow: 0 0 20px var(--accent-glow), 0 4px 15px var(--shadow-color);
 	position: relative;
@@ -659,7 +887,8 @@ html.theme-light a:hover {
 	background-clip: padding-box;
 }
 
-.button::before,button::before {
+.button::before,
+button::before {
 	content: '';
 	position: absolute;
 	top: 50%;
@@ -674,23 +903,26 @@ html.theme-light a:hover {
 	z-index: 1;
 }
 
-.button::after,button::after {
+.button::after,
+button::after {
 	content: '';
 	position: absolute;
 	inset: 0;
-	background: linear-gradient(45deg, transparent, rgba(255,255,255,0.2), transparent);
+	background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.2), transparent);
 	opacity: 0;
 	transition: opacity 0.4s ease;
 	pointer-events: none;
 	border-radius: 1.25rem;
 }
 
-.button:active::before,button:active::before {
+.button:active::before,
+button:active::before {
 	width: 350px;
 	height: 350px;
 }
 
-.button:hover::after,button:hover::after {
+.button:hover::after,
+button:hover::after {
 	opacity: 1;
 }
 
@@ -717,15 +949,16 @@ html.theme-light button:disabled {
 }
 
 /* Icons
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
+â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“ */
 .icon {
-	width:1.25rem;
-	height:1.25rem;
-	margin-right:0.5rem;
-	flex-shrink:0;
+	width: 1.25rem;
+	height: 1.25rem;
+	margin-right: 0.5rem;
+	flex-shrink: 0;
 	transition: transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1), filter 0.5s ease;
 	filter: var(--icon-filter, drop-shadow(0 3px 10px var(--accent-glow)));
 }
+
 .button:hover .icon,
 button:hover .icon {
 	transform: scale(1.25) rotate(15deg) skewX(5deg);
@@ -733,37 +966,40 @@ button:hover .icon {
 }
 
 /* Avatar
-  –––––––––––––––––––––––––––––––––––––––––––––––––– */
+  â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“ */
 .avatar {
-	width: 8rem;             /* 128px */
+	width: 8rem;
+	/* 128px */
 	height: 8rem;
 	object-fit: cover;
 	background-position: center;
 	margin-bottom: var(--spacing-l);
-  }
+}
 
-   /* Modifier for no avatar rounding */
-   .avatar--none {
+/* Modifier for no avatar rounding */
+.avatar--none {
 	border-radius: 0%;
-  }
+}
 
-  /* Modifier for rounded avatar */
-  .avatar--rounded {
+/* Modifier for rounded avatar */
+.avatar--rounded {
 	border-radius: 50%;
-  }
+}
 
-  /* Modifier for slightly rounded corners */
-  .avatar--soft {
-	border-radius: 0.5rem;   /* 8px rounded corners */
-  }
+/* Modifier for slightly rounded corners */
+.avatar--soft {
+	border-radius: 0.5rem;
+	/* 8px rounded corners */
+}
 
 /* Theme System
-  –––––––––––––––––––––––––––––––––––––––––––––––––– */
+  â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“ */
 /* Light theme is default above */
 
 /* Button Text Color Override
-    –––––––––––––––––––––––––––––––––––––––––––––––––– */
-	.button:hover,button:hover {
+    â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“ */
+.button:hover,
+button:hover {
 	color: var(--button-text-hover, var(--button-text, var(--text-hover, var(--secondary-color))));
 	transform: translateY(-6px) scale(1.03);
 	background-color: var(--button-background-hover, var(--button-background, var(--button-bg-hover, var(--button-bg))));
@@ -771,38 +1007,42 @@ button:hover .icon {
 	border-color: var(--primary-light);
 }
 
-.button:focus,button:focus {
+.button:focus,
+button:focus {
 	outline: none;
 	box-shadow: 0 0 0 5px var(--accent-glow), 0 0 30px var(--accent-glow), 0 8px 20px var(--shadow-color);
 	transform: translateY(-4px);
 }
 
-.button:active,button:active {
+.button:active,
+button:active {
 	transform: translateY(-2px);
 }
 
 /* Disabled button (CSS-only) */
 .button--disabled,
 a[aria-disabled="true"].button {
-    opacity:0.45;
-    cursor:default;
-    /* prevent mouse interactions while keeping it semantic */
-    pointer-events:none;
-    text-decoration:none;
-    filter: grayscale(100%);
+	opacity: 0.45;
+	cursor: default;
+	/* prevent mouse interactions while keeping it semantic */
+	pointer-events: none;
+	text-decoration: none;
+	filter: grayscale(100%);
 }
 
 .button--disabled:hover,
 a[aria-disabled="true"].button:hover {
-    transform: none;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+	transform: none;
+	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
 }
 
 a[aria-disabled="true"].button:focus,
 a[aria-disabled="true"].button:active {
-    outline: none;
-}/* Theme Switcher Styling
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
+	outline: none;
+}
+
+/* Theme Switcher Styling
+â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“ */
 .theme-switcher {
 	position: fixed;
 	top: 20px;
@@ -825,7 +1065,8 @@ a[aria-disabled="true"].button:active {
 .theme-switcher.collapsed {
 	padding: 0;
 	border-radius: 50%;
-	width: 48px; /* use even pixel size to avoid subpixel rounding */
+	width: 48px;
+	/* use even pixel size to avoid subpixel rounding */
 	height: 48px;
 	justify-content: center;
 	align-items: center;
@@ -866,7 +1107,7 @@ a[aria-disabled="true"].button:active {
 	position: absolute;
 	width: 100%;
 	height: 100%;
-	background: linear-gradient(45deg, transparent, rgba(255,255,255,0.2), transparent);
+	background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.2), transparent);
 	opacity: 0;
 	transition: opacity 0.3s ease;
 }
@@ -907,15 +1148,16 @@ a[aria-disabled="true"].button:active {
 	top: 50%;
 	transform: translateY(-50%);
 	white-space: nowrap;
-	background: rgba(0,0,0,0.6);
+	background: rgba(0, 0, 0, 0.6);
 	color: #fff;
 	padding: 6px 10px;
 	border-radius: 8px;
 	font-size: 0.875rem;
-	box-shadow: 0 6px 18px rgba(0,0,0,0.18);
+	box-shadow: 0 6px 18px rgba(0, 0, 0, 0.18);
 	opacity: 0;
 	transition: opacity 0.18s ease, transform 0.18s ease;
 }
+
 .theme-switcher:not(.collapsed) .theme-btn:hover::after,
 .theme-switcher:not(.collapsed) .theme-btn:focus::after {
 	opacity: 1;
@@ -925,14 +1167,14 @@ a[aria-disabled="true"].button:active {
 /* Focus-visible styling for theme buttons */
 .theme-btn:focus {
 	outline: none;
-	box-shadow: 0 0 0 4px rgba(0,0,0,0.12), 0 0 0 6px var(--accent-color);
+	box-shadow: 0 0 0 4px rgba(0, 0, 0, 0.12), 0 0 0 6px var(--accent-color);
 }
 
-/* Removed small toggle indicator — toggle uses icon only for clarity */
+/* Removed small toggle indicator â€” toggle uses icon only for clarity */
 
 /* Improve social icon contrast in light theme */
 html.theme-light .button img.icon {
-	filter: drop-shadow(0 2px 8px rgba(0,0,0,0.18));
+	filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.18));
 	opacity: 1;
 }
 
@@ -955,8 +1197,8 @@ html.theme-light .theme-btn svg {
 	width: 48px !important;
 	height: 48px !important;
 	font-size: 18px;
-	background: rgba(255,255,255,0.03);
-	border: 1px solid rgba(255,255,255,0.06);
+	background: rgba(255, 255, 255, 0.03);
+	border: 1px solid rgba(255, 255, 255, 0.06);
 	color: var(--text-primary);
 	display: inline-flex;
 	align-items: center;
@@ -975,24 +1217,38 @@ html.theme-light .theme-btn svg {
 }
 
 @keyframes themePulse {
-	0% { transform: scale(1); }
-	50% { transform: scale(1.2); }
-	100% { transform: scale(1); }
-}
-  @media (max-width:34.375rem) {            /* 550px */
-    h1 {
-	font-size:2rem;                         /* 32px */
+	0% {
+		transform: scale(1);
 	}
+
+	50% {
+		transform: scale(1.2);
+	}
+
+	100% {
+		transform: scale(1);
+	}
+}
+
+@media (max-width:34.375rem) {
+
+	/* 550px */
+	h1 {
+		font-size: 2rem;
+		/* 32px */
+	}
+
 	body {
-	font-size:1rem;                    		/* 16px */
+		font-size: 1rem;
+		/* 16px */
 	}
 }
 
 /* Privacy Page Styles
-  –––––––––––––––––––––––––––––––––––––––––––––––––– */
+  â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“ */
 nav {
-	margin:var(--spacing-l) 0;
-	text-align:left;
+	margin: var(--spacing-l) 0;
+	text-align: left;
 }
 
 /* Enhanced visual effects for section titles */
@@ -1025,7 +1281,7 @@ nav {
 	align-items: center;
 	gap: 0.5rem;
 	padding: 1rem;
-	background: linear-gradient(135deg, rgba(255,255,255,0.05) 0%, rgba(255,255,255,0.02) 100%);
+	background: linear-gradient(135deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.02) 100%);
 	border-radius: 1.5rem;
 	border: 1px solid var(--glass-border);
 	backdrop-filter: blur(10px);
@@ -1038,6 +1294,7 @@ nav {
 		opacity: 0;
 		transform: translateY(20px);
 	}
+
 	to {
 		opacity: 1;
 		transform: translateY(0);
@@ -1063,6 +1320,7 @@ nav {
 		transform: translateY(-40px) scale(0.9);
 		filter: blur(10px);
 	}
+
 	to {
 		opacity: 1;
 		transform: translateY(0) scale(1);
@@ -1076,6 +1334,7 @@ nav {
 		transform: translateY(40px) scale(0.9);
 		filter: blur(10px);
 	}
+
 	to {
 		opacity: 1;
 		transform: translateY(0) scale(1);
@@ -1088,6 +1347,7 @@ nav {
 		opacity: 0;
 		filter: blur(5px);
 	}
+
 	to {
 		opacity: 1;
 		filter: blur(0);
@@ -1095,126 +1355,226 @@ nav {
 }
 
 section {
-	margin:var(--spacing-xl) 0;
-	text-align:left;
+	margin: var(--spacing-xl) 0;
+	text-align: left;
 }
+
 h2 {
-	font-size:var(--scale-3);
-	font-weight:700;
-	margin-bottom:var(--spacing-m);
+	font-size: var(--scale-3);
+	font-weight: 700;
+	margin-bottom: var(--spacing-m);
 }
+
 h3 {
-	font-size:var(--scale-2);
-	font-weight:600;
-	margin:var(--spacing-l) 0 var(--spacing-s) 0;
+	font-size: var(--scale-2);
+	font-weight: 600;
+	margin: var(--spacing-l) 0 var(--spacing-s) 0;
 }
+
 ul {
-	list-style:none;
-	padding:0;
-	margin:0 0 var(--spacing-m) 0;
+	list-style: none;
+	padding: 0;
+	margin: 0 0 var(--spacing-m) 0;
 }
+
 ul li {
-	margin-bottom:var(--spacing-xs);
+	margin-bottom: var(--spacing-xs);
 }
 
 /* Privacy page specific responsive adjustments */
-  @media (max-width:34.375rem) {
+@media (max-width:34.375rem) {
 	h2 {
-	font-size:var(--scale-2);
+		font-size: var(--scale-2);
 	}
+
 	h3 {
-	font-size:var(--scale-1);
+		font-size: var(--scale-1);
 	}
+
 	section {
-	margin:var(--spacing-l) 0;
+		margin: var(--spacing-l) 0;
 	}
 }
 
 /* Font Face Definitions
-  –––––––––––––––––––––––––––––––––––––––––––––––––– */
+  â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“ */
 @font-face {
-	font-display:swap;
-	font-family:'Open Sans';
-	font-style:normal;
-	font-weight:400;
-	src:url('../fonts/open-sans-v34-vietnamese_latin-ext_latin_hebrew_greek-ext_greek_cyrillic-ext_cyrillic-regular.eot');
-	src:url('../fonts/open-sans-v34-vietnamese_latin-ext_latin_hebrew_greek-ext_greek_cyrillic-ext_cyrillic-regular.eot?#iefix') format('embedded-opentype'),url('../fonts/open-sans-v34-vietnamese_latin-ext_latin_hebrew_greek-ext_greek_cyrillic-ext_cyrillic-regular.woff2') format('woff2'),url('../fonts/open-sans-v34-vietnamese_latin-ext_latin_hebrew_greek-ext_greek_cyrillic-ext_cyrillic-regular.woff') format('woff'),url('../fonts/open-sans-v34-vietnamese_latin-ext_latin_hebrew_greek-ext_greek_cyrillic-ext_cyrillic-regular.ttf') format('truetype'),url('../fonts/open-sans-v34-vietnamese_latin-ext_latin_hebrew_greek-ext_greek_cyrillic-ext_cyrillic-regular.svg#OpenSans') format('svg');
+	font-display: swap;
+	font-family: 'Open Sans';
+	font-style: normal;
+	font-weight: 400;
+	src: url('../fonts/open-sans-v34-vietnamese_latin-ext_latin_hebrew_greek-ext_greek_cyrillic-ext_cyrillic-regular.eot');
+	src: url('../fonts/open-sans-v34-vietnamese_latin-ext_latin_hebrew_greek-ext_greek_cyrillic-ext_cyrillic-regular.eot?#iefix') format('embedded-opentype'), url('../fonts/open-sans-v34-vietnamese_latin-ext_latin_hebrew_greek-ext_greek_cyrillic-ext_cyrillic-regular.woff2') format('woff2'), url('../fonts/open-sans-v34-vietnamese_latin-ext_latin_hebrew_greek-ext_greek_cyrillic-ext_cyrillic-regular.woff') format('woff'), url('../fonts/open-sans-v34-vietnamese_latin-ext_latin_hebrew_greek-ext_greek_cyrillic-ext_cyrillic-regular.ttf') format('truetype'), url('../fonts/open-sans-v34-vietnamese_latin-ext_latin_hebrew_greek-ext_greek_cyrillic-ext_cyrillic-regular.svg#OpenSans') format('svg');
 }
+
 @font-face {
-	font-display:swap;
-	font-family:'Open Sans';
-	font-style:normal;
-	font-weight:600;
-	src:url('../fonts/open-sans-v34-vietnamese_latin-ext_latin_hebrew_greek-ext_greek_cyrillic-ext_cyrillic-600.eot');
-	src:url('../fonts/open-sans-v34-vietnamese_latin-ext_latin_hebrew_greek-ext_greek_cyrillic-ext_cyrillic-600.eot?#iefix') format('embedded-opentype'),url('../fonts/open-sans-v34-vietnamese_latin-ext_latin_hebrew_greek-ext_greek_cyrillic-ext_cyrillic-600.woff2') format('woff2'),url('../fonts/open-sans-v34-vietnamese_latin-ext_latin_hebrew_greek-ext_greek_cyrillic-ext_cyrillic-600.woff') format('woff'),url('../fonts/open-sans-v34-vietnamese_latin-ext_latin_hebrew_greek-ext_greek_cyrillic-ext_cyrillic-600.ttf') format('truetype'),url('../fonts/open-sans-v34-vietnamese_latin-ext_latin_hebrew_greek-ext_greek_cyrillic-ext_cyrillic-600.svg#OpenSans') format('svg');
+	font-display: swap;
+	font-family: 'Open Sans';
+	font-style: normal;
+	font-weight: 600;
+	src: url('../fonts/open-sans-v34-vietnamese_latin-ext_latin_hebrew_greek-ext_greek_cyrillic-ext_cyrillic-600.eot');
+	src: url('../fonts/open-sans-v34-vietnamese_latin-ext_latin_hebrew_greek-ext_greek_cyrillic-ext_cyrillic-600.eot?#iefix') format('embedded-opentype'), url('../fonts/open-sans-v34-vietnamese_latin-ext_latin_hebrew_greek-ext_greek_cyrillic-ext_cyrillic-600.woff2') format('woff2'), url('../fonts/open-sans-v34-vietnamese_latin-ext_latin_hebrew_greek-ext_greek_cyrillic-ext_cyrillic-600.woff') format('woff'), url('../fonts/open-sans-v34-vietnamese_latin-ext_latin_hebrew_greek-ext_greek_cyrillic-ext_cyrillic-600.ttf') format('truetype'), url('../fonts/open-sans-v34-vietnamese_latin-ext_latin_hebrew_greek-ext_greek_cyrillic-ext_cyrillic-600.svg#OpenSans') format('svg');
 }
+
 @font-face {
-	font-display:swap;
-	font-family:'Open Sans';
-	font-style:normal;
-	font-weight:700;
-	src:url('../fonts/open-sans-v34-vietnamese_latin-ext_latin_hebrew_greek-ext_greek_cyrillic-ext_cyrillic-700.eot');
-	src:url('../fonts/open-sans-v34-vietnamese_latin-ext_latin_hebrew_greek-ext_greek_cyrillic-ext_cyrillic-700.eot?#iefix') format('embedded-opentype'),url('../fonts/open-sans-v34-vietnamese_latin-ext_latin_hebrew_greek-ext_greek_cyrillic-ext_cyrillic-700.woff2') format('woff2'),url('../fonts/open-sans-v34-vietnamese_latin-ext_latin_hebrew_greek-ext_greek_cyrillic-ext_cyrillic-700.woff') format('woff'),url('../fonts/open-sans-v34-vietnamese_latin-ext_latin_hebrew_greek-ext_greek_cyrillic-ext_cyrillic-700.ttf') format('truetype'),url('../fonts/open-sans-v34-vietnamese_latin-ext_latin_hebrew_greek-ext_greek_cyrillic-ext_cyrillic-700.svg#OpenSans') format('svg');
+	font-display: swap;
+	font-family: 'Open Sans';
+	font-style: normal;
+	font-weight: 700;
+	src: url('../fonts/open-sans-v34-vietnamese_latin-ext_latin_hebrew_greek-ext_greek_cyrillic-ext_cyrillic-700.eot');
+	src: url('../fonts/open-sans-v34-vietnamese_latin-ext_latin_hebrew_greek-ext_greek_cyrillic-ext_cyrillic-700.eot?#iefix') format('embedded-opentype'), url('../fonts/open-sans-v34-vietnamese_latin-ext_latin_hebrew_greek-ext_greek_cyrillic-ext_cyrillic-700.woff2') format('woff2'), url('../fonts/open-sans-v34-vietnamese_latin-ext_latin_hebrew_greek-ext_greek_cyrillic-ext_cyrillic-700.woff') format('woff'), url('../fonts/open-sans-v34-vietnamese_latin-ext_latin_hebrew_greek-ext_greek_cyrillic-ext_cyrillic-700.ttf') format('truetype'), url('../fonts/open-sans-v34-vietnamese_latin-ext_latin_hebrew_greek-ext_greek_cyrillic-ext_cyrillic-700.svg#OpenSans') format('svg');
 }
+
 @font-face {
-	font-display:swap;
-	font-family:'Open Sans';
-	font-style:normal;
-	font-weight:800;
-	src:url('../fonts/open-sans-v34-vietnamese_latin-ext_latin_hebrew_greek-ext_greek_cyrillic-ext_cyrillic-800.eot');
-	src:url('../fonts/open-sans-v34-vietnamese_latin-ext_latin_hebrew_greek-ext_greek_cyrillic-ext_cyrillic-800.eot?#iefix') format('embedded-opentype'),url('../fonts/open-sans-v34-vietnamese_latin-ext_latin_hebrew_greek-ext_greek_cyrillic-ext_cyrillic-800.woff2') format('woff2'),url('../fonts/open-sans-v34-vietnamese_latin-ext_latin_hebrew_greek-ext_greek_cyrillic-ext_cyrillic-800.woff') format('woff'),url('../fonts/open-sans-v34-vietnamese_latin-ext_latin_hebrew_greek-ext_greek_cyrillic-ext_cyrillic-800.ttf') format('truetype'),url('../fonts/open-sans-v34-vietnamese_latin-ext_latin_hebrew_greek-ext_greek_cyrillic-ext_cyrillic-800.svg#OpenSans') format('svg');
+	font-display: swap;
+	font-family: 'Open Sans';
+	font-style: normal;
+	font-weight: 800;
+	src: url('../fonts/open-sans-v34-vietnamese_latin-ext_latin_hebrew_greek-ext_greek_cyrillic-ext_cyrillic-800.eot');
+	src: url('../fonts/open-sans-v34-vietnamese_latin-ext_latin_hebrew_greek-ext_greek_cyrillic-ext_cyrillic-800.eot?#iefix') format('embedded-opentype'), url('../fonts/open-sans-v34-vietnamese_latin-ext_latin_hebrew_greek-ext_greek_cyrillic-ext_cyrillic-800.woff2') format('woff2'), url('../fonts/open-sans-v34-vietnamese_latin-ext_latin_hebrew_greek-ext_greek_cyrillic-ext_cyrillic-800.woff') format('woff'), url('../fonts/open-sans-v34-vietnamese_latin-ext_latin_hebrew_greek-ext_greek_cyrillic-ext_cyrillic-800.ttf') format('truetype'), url('../fonts/open-sans-v34-vietnamese_latin-ext_latin_hebrew_greek-ext_greek_cyrillic-ext_cyrillic-800.svg#OpenSans') format('svg');
 }
 
 /* Strong overrides for brand buttons in light theme to ensure readability */
 html.theme-light .button {
-  /* neutral surface so brand dark gradients don't hide text */
-  background-image: none !important;
-  background: linear-gradient(135deg,#ffffff 0%, #f7f7f7 100%) !important;
-  color: #0b0b0b !important;
-  border: 1px solid rgba(0,0,0,0.06) !important;
-  box-shadow: 0 8px 24px rgba(0,0,0,0.04) !important;
+	/* neutral surface so brand dark gradients don't hide text */
+	background-image: none !important;
+	background: linear-gradient(135deg, #ffffff 0%, #f7f7f7 100%) !important;
+	color: #0b0b0b !important;
+	border: 1px solid rgba(0, 0, 0, 0.06) !important;
+	box-shadow: 0 8px 24px rgba(0, 0, 0, 0.04) !important;
 }
 
 /* keep a subtle brand accent: small left dot using brand variable when available */
 html.theme-light .button[class*="button-"] {
-  position: relative;
+	position: relative;
 }
+
 html.theme-light .button[class*="button-"]::before {
-  content: '';
-  position: absolute;
-  left: 0.5rem;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  background: var(--button-background, transparent);
-  box-shadow: 0 0 0 2px rgba(0,0,0,0.03) inset;
-  opacity: 0.95;
+	content: '';
+	position: absolute;
+	left: 0.5rem;
+	top: 50%;
+	transform: translateY(-50%);
+	width: 8px;
+	height: 8px;
+	border-radius: 50%;
+	background: var(--button-background, transparent);
+	box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.03) inset;
+	opacity: 0.95;
 }
 
 /* Ensure icons are visible and not inverted */
 html.theme-light .button .icon {
-  filter: none !important;
-  mix-blend-mode: normal !important;
-  opacity: 1 !important;
-  filter: drop-shadow(0 2px 6px rgba(0,0,0,0.06));
+	filter: none !important;
+	mix-blend-mode: normal !important;
+	opacity: 1 !important;
+	filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.06));
 }
 
 /* Make hovered state slightly darker to indicate affordance */
 html.theme-light .button:hover {
-  background: linear-gradient(135deg,#fafafa 0%, #efefef 100%) !important;
-  transform: translateY(-2px);
+	background: linear-gradient(135deg, #fafafa 0%, #efefef 100%) !important;
+	transform: translateY(-2px);
 }
 
 /* If a brand explicitly defines a very light text color, override to ensure contrast */
 html.theme-light .button[style],
 html.theme-light .button[class] {
-  color: #0b0b0b !important;
+	color: #0b0b0b !important;
 }
 
 /* Focus state for keyboard users */
 html.theme-light .button:focus {
-  outline: 3px solid rgba(127,29,29,0.12);
-  outline-offset: 4px;
+	outline: 3px solid rgba(127, 29, 29, 0.12);
+	outline-offset: 4px;
 }
+
+/* Share Button - Bolinha Pequena */
+.share-btn {
+	position: fixed;
+	top: 20px;
+	left: 20px;
+	width: 36px;
+	height: 36px;
+	border-radius: 50%;
+	background: rgba(255, 255, 255, 0.08);
+	border: 1px solid rgba(255, 255, 255, 0.15);
+	color: var(--text-primary);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+	z-index: 100;
+	transition: all 0.3s ease;
+	backdrop-filter: blur(8px);
+	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.share-btn svg {
+	width: 18px;
+	height: 18px;
+	transition: transform 0.3s ease;
+}
+
+.share-btn:hover {
+	background: var(--accent-color);
+	border-color: var(--accent-color);
+	box-shadow: 0 0 20px var(--accent-glow);
+	transform: scale(1.15);
+}
+
+.share-btn:hover svg {
+	transform: rotate(15deg);
+}
+
+/* Loader */
+.loader {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: linear-gradient(135deg, var(--bg-gradient-start) 0%, var(--bg-gradient-end) 100%);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	z-index: 9999;
+	transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+.loader-spinner {
+	width: 60px;
+	height: 60px;
+	border: 4px solid rgba(255, 255, 255, 0.1);
+	border-top: 4px solid var(--accent-color);
+	border-radius: 50%;
+	animation: loaderSpin 0.8s linear infinite;
+	box-shadow: 0 0 20px var(--accent-glow);
+}
+
+@keyframes loaderSpin {
+	0% {
+		transform: rotate(0deg);
+	}
+
+	100% {
+		transform: rotate(360deg);
+	}
+}
+
+.loader-hidden {
+	opacity: 0;
+	visibility: hidden;
+}
+
+html.theme-light .loader {
+	background: linear-gradient(135deg, #ffffff 0%, #f5f5f5 100%);
+}
+
+html.theme-light .loader-spinner {
+	border: 4px solid rgba(0, 0, 0, 0.1);
+	border-top: 4px solid var(--accent-color);
+	box-shadow: 0 0 20px rgba(127, 29, 29, 0.2);
+}  
+/* Share Button Overrides */  
+.share-btn { min-height: 36px !important; padding: 0 !important; margin: 0 !important; width: 36px !important; height: 36px !important; } 
