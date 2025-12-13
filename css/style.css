@@ -854,13 +854,13 @@ html.theme-light a:hover {
 button {
 	display: inline-flex;
 	align-items: center;
-	justify-content: center;
-	width: 18.75rem;
-	/* 300px */
-	min-height: 3rem;
-	/* 48px */
-	padding: 0.75rem 1rem;
-	/* 12px ; 16px */
+	justify-content: space-between;
+	width: 100%;
+	/* Full width */
+	min-height: 3.5rem;
+	/* Slightly taller */
+	padding: 0.75rem 1.5rem;
+	/* Increased padding */
 	font-size: 1.125rem;
 	/* 18px */
 	font-weight: 700;
@@ -869,7 +869,8 @@ button {
 	background-color: var(--button-background, var(--button-bg));
 	color: var(--button-text, var(--text-primary));
 	border: var(--button-border, 2px solid var(--accent-color));
-	border-radius: 1.25rem;
+	border-radius: 9999px;
+	/* Pill shape */
 	cursor: pointer;
 	box-sizing: border-box;
 	hyphens: auto;
@@ -951,9 +952,10 @@ html.theme-light button:disabled {
 /* Icons
 â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“ */
 .icon {
-	width: 1.25rem;
-	height: 1.25rem;
-	margin-right: 0.5rem;
+	width: 1.5rem;
+	height: 1.5rem;
+	margin-left: 0.5rem;
+	margin-right: 0;
 	flex-shrink: 0;
 	transition: transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1), filter 0.5s ease;
 	filter: var(--icon-filter, drop-shadow(0 3px 10px var(--accent-glow)));
@@ -1573,8 +1575,507 @@ html.theme-light .loader {
 
 html.theme-light .loader-spinner {
 	border: 4px solid rgba(0, 0, 0, 0.1);
+	margin-bottom: var(--spacing-xs);
+}
+
+/* Privacy page specific responsive adjustments */
+@media (max-width:34.375rem) {
+	h2 {
+		font-size: var(--scale-2);
+	}
+
+	h3 {
+		font-size: var(--scale-1);
+	}
+
+	section {
+		margin: var(--spacing-l) 0;
+	}
+}
+
+/* Font Face Definitions
+  –––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––– */
+@font-face {
+	font-display: swap;
+	font-family: 'Open Sans';
+	font-style: normal;
+	font-weight: 400;
+	src: url('../fonts/open-sans-v34-vietnamese_latin-ext_latin_hebrew_greek-ext_greek_cyrillic-ext_cyrillic-regular.eot');
+	src: url('../fonts/open-sans-v34-vietnamese_latin-ext_latin_hebrew_greek-ext_greek_cyrillic-ext_cyrillic-regular.eot?#iefix') format('embedded-opentype'), url('../fonts/open-sans-v34-vietnamese_latin-ext_latin_hebrew_greek-ext_greek_cyrillic-ext_cyrillic-regular.woff2') format('woff2'), url('../fonts/open-sans-v34-vietnamese_latin-ext_latin_hebrew_greek-ext_greek_cyrillic-ext_cyrillic-regular.woff') format('woff'), url('../fonts/open-sans-v34-vietnamese_latin-ext_latin_hebrew_greek-ext_greek_cyrillic-ext_cyrillic-regular.ttf') format('truetype'), url('../fonts/open-sans-v34-vietnamese_latin-ext_latin_hebrew_greek-ext_greek_cyrillic-ext_cyrillic-regular.svg#OpenSans') format('svg');
+}
+
+@font-face {
+	font-display: swap;
+	font-family: 'Open Sans';
+	font-style: normal;
+	font-weight: 600;
+	src: url('../fonts/open-sans-v34-vietnamese_latin-ext_latin_hebrew_greek-ext_greek_cyrillic-ext_cyrillic-600.eot');
+	src: url('../fonts/open-sans-v34-vietnamese_latin-ext_latin_hebrew_greek-ext_greek_cyrillic-ext_cyrillic-600.eot?#iefix') format('embedded-opentype'), url('../fonts/open-sans-v34-vietnamese_latin-ext_latin_hebrew_greek-ext_greek_cyrillic-ext_cyrillic-600.woff2') format('woff2'), url('../fonts/open-sans-v34-vietnamese_latin-ext_latin_hebrew_greek-ext_greek_cyrillic-ext_cyrillic-600.woff') format('woff'), url('../fonts/open-sans-v34-vietnamese_latin-ext_latin_hebrew_greek-ext_greek_cyrillic-ext_cyrillic-600.ttf') format('truetype'), url('../fonts/open-sans-v34-vietnamese_latin-ext_latin_hebrew_greek-ext_greek_cyrillic-ext_cyrillic-600.svg#OpenSans') format('svg');
+}
+
+@font-face {
+	font-display: swap;
+	font-family: 'Open Sans';
+	font-style: normal;
+	font-weight: 700;
+	src: url('../fonts/open-sans-v34-vietnamese_latin-ext_latin_hebrew_greek-ext_greek_cyrillic-ext_cyrillic-700.eot');
+	src: url('../fonts/open-sans-v34-vietnamese_latin-ext_latin_hebrew_greek-ext_greek_cyrillic-ext_cyrillic-700.eot?#iefix') format('embedded-opentype'), url('../fonts/open-sans-v34-vietnamese_latin-ext_latin_hebrew_greek-ext_greek_cyrillic-ext_cyrillic-700.woff2') format('woff2'), url('../fonts/open-sans-v34-vietnamese_latin-ext_latin_hebrew_greek-ext_greek_cyrillic-ext_cyrillic-700.woff') format('woff'), url('../fonts/open-sans-v34-vietnamese_latin-ext_latin_hebrew_greek-ext_greek_cyrillic-ext_cyrillic-700.ttf') format('truetype'), url('../fonts/open-sans-v34-vietnamese_latin-ext_latin_hebrew_greek-ext_greek_cyrillic-ext_cyrillic-700.svg#OpenSans') format('svg');
+}
+
+@font-face {
+	font-display: swap;
+	font-family: 'Open Sans';
+	font-style: normal;
+	font-weight: 800;
+	src: url('../fonts/open-sans-v34-vietnamese_latin-ext_latin_hebrew_greek-ext_greek_cyrillic-ext_cyrillic-800.eot');
+	src: url('../fonts/open-sans-v34-vietnamese_latin-ext_latin_hebrew_greek-ext_greek_cyrillic-ext_cyrillic-800.eot?#iefix') format('embedded-opentype'), url('../fonts/open-sans-v34-vietnamese_latin-ext_latin_hebrew_greek-ext_greek_cyrillic-ext_cyrillic-800.woff2') format('woff2'), url('../fonts/open-sans-v34-vietnamese_latin-ext_latin_hebrew_greek-ext_greek_cyrillic-ext_cyrillic-800.woff') format('woff'), url('../fonts/open-sans-v34-vietnamese_latin-ext_latin_hebrew_greek-ext_greek_cyrillic-ext_cyrillic-800.ttf') format('truetype'), url('../fonts/open-sans-v34-vietnamese_latin-ext_latin_hebrew_greek-ext_greek_cyrillic-ext_cyrillic-800.svg#OpenSans') format('svg');
+}
+
+/* Strong overrides for brand buttons in light theme to ensure readability */
+html.theme-light .button {
+	/* neutral surface so brand dark gradients don't hide text */
+	background-image: none !important;
+	background: linear-gradient(135deg, #ffffff 0%, #f7f7f7 100%) !important;
+	color: #0b0b0b !important;
+	border: 1px solid rgba(0, 0, 0, 0.06) !important;
+	box-shadow: 0 8px 24px rgba(0, 0, 0, 0.04) !important;
+}
+
+/* keep a subtle brand accent: small left dot using brand variable when available */
+html.theme-light .button[class*="button-"] {
+	position: relative;
+}
+
+html.theme-light .button[class*="button-"]::before {
+	content: '';
+	position: absolute;
+	left: 0.5rem;
+	top: 50%;
+	transform: translateY(-50%);
+	width: 8px;
+	height: 8px;
+	border-radius: 50%;
+	background: var(--button-background, transparent);
+	box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.03) inset;
+	opacity: 0.95;
+}
+
+/* Ensure icons are visible and not inverted */
+html.theme-light .button .icon {
+	filter: none !important;
+	mix-blend-mode: normal !important;
+	opacity: 1 !important;
+	filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.06));
+}
+
+/* Make hovered state slightly darker to indicate affordance */
+html.theme-light .button:hover {
+	background: linear-gradient(135deg, #fafafa 0%, #efefef 100%) !important;
+	transform: translateY(-2px);
+}
+
+/* If a brand explicitly defines a very light text color, override to ensure contrast */
+html.theme-light .button[style],
+html.theme-light .button[class] {
+	color: #0b0b0b !important;
+}
+
+/* Focus state for keyboard users */
+html.theme-light .button:focus {
+	outline: 3px solid rgba(127, 29, 29, 0.12);
+	outline-offset: 4px;
+}
+
+/* Share Button - Bolinha Pequena */
+.share-btn {
+	position: fixed;
+	top: 20px;
+	left: 20px;
+	width: 36px;
+	height: 36px;
+	border-radius: 50%;
+	background: rgba(255, 255, 255, 0.08);
+	border: 1px solid rgba(255, 255, 255, 0.15);
+	color: var(--text-primary);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+	z-index: 100;
+	transition: all 0.3s ease;
+	backdrop-filter: blur(8px);
+	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.share-btn svg {
+	width: 18px;
+	height: 18px;
+	transition: transform 0.3s ease;
+}
+
+.share-btn:hover {
+	background: var(--accent-color);
+	border-color: var(--accent-color);
+	box-shadow: 0 0 20px var(--accent-glow);
+	transform: scale(1.15);
+}
+
+.share-btn:hover svg {
+	transform: rotate(15deg);
+}
+
+/* Loader */
+.loader {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: linear-gradient(135deg, var(--bg-gradient-start) 0%, var(--bg-gradient-end) 100%);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	z-index: 9999;
+	transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+.loader-spinner {
+	width: 60px;
+	height: 60px;
+	border: 4px solid rgba(255, 255, 255, 0.1);
+	border-top: 4px solid var(--accent-color);
+	border-radius: 50%;
+	animation: loaderSpin 0.8s linear infinite;
+	box-shadow: 0 0 20px var(--accent-glow);
+}
+
+@keyframes loaderSpin {
+	0% {
+		transform: rotate(0deg);
+	}
+
+	100% {
+		transform: rotate(360deg);
+	}
+}
+
+.loader-hidden {
+	opacity: 0;
+	visibility: hidden;
+}
+
+html.theme-light .loader {
+	background: linear-gradient(135deg, #ffffff 0%, #f5f5f5 100%);
+}
+
+html.theme-light .loader-spinner {
+	border: 4px solid rgba(0, 0, 0, 0.1);
 	border-top: 4px solid var(--accent-color);
 	box-shadow: 0 0 20px rgba(127, 29, 29, 0.2);
-}  
-/* Share Button Overrides */  
-.share-btn { min-height: 36px !important; padding: 0 !important; margin: 0 !important; width: 36px !important; height: 36px !important; } 
+}
+
+/* Share Button Overrides */
+.share-btn {
+	min-height: 36px !important;
+	padding: 0 !important;
+
+	h3 {
+		font-size: var(--scale-1);
+	}
+
+	section {
+		margin: var(--spacing-l) 0;
+	}
+}
+
+/* Font Face Definitions
+  –––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––– */
+@font-face {
+	font-display: swap;
+	font-family: 'Open Sans';
+	font-style: normal;
+	font-weight: 400;
+	src: url('../fonts/open-sans-v34-vietnamese_latin-ext_latin_hebrew_greek-ext_greek_cyrillic-ext_cyrillic-regular.eot');
+	src: url('../fonts/open-sans-v34-vietnamese_latin-ext_latin_hebrew_greek-ext_greek_cyrillic-ext_cyrillic-regular.eot?#iefix') format('embedded-opentype'), url('../fonts/open-sans-v34-vietnamese_latin-ext_latin_hebrew_greek-ext_greek_cyrillic-ext_cyrillic-regular.woff2') format('woff2'), url('../fonts/open-sans-v34-vietnamese_latin-ext_latin_hebrew_greek-ext_greek_cyrillic-ext_cyrillic-regular.woff') format('woff'), url('../fonts/open-sans-v34-vietnamese_latin-ext_latin_hebrew_greek-ext_greek_cyrillic-ext_cyrillic-regular.ttf') format('truetype'), url('../fonts/open-sans-v34-vietnamese_latin-ext_latin_hebrew_greek-ext_greek_cyrillic-ext_cyrillic-regular.svg#OpenSans') format('svg');
+}
+
+@font-face {
+	font-display: swap;
+	font-family: 'Open Sans';
+	font-style: normal;
+	font-weight: 600;
+	src: url('../fonts/open-sans-v34-vietnamese_latin-ext_latin_hebrew_greek-ext_greek_cyrillic-ext_cyrillic-600.eot');
+	src: url('../fonts/open-sans-v34-vietnamese_latin-ext_latin_hebrew_greek-ext_greek_cyrillic-ext_cyrillic-600.eot?#iefix') format('embedded-opentype'), url('../fonts/open-sans-v34-vietnamese_latin-ext_latin_hebrew_greek-ext_greek_cyrillic-ext_cyrillic-600.woff2') format('woff2'), url('../fonts/open-sans-v34-vietnamese_latin-ext_latin_hebrew_greek-ext_greek_cyrillic-ext_cyrillic-600.woff') format('woff'), url('../fonts/open-sans-v34-vietnamese_latin-ext_latin_hebrew_greek-ext_greek_cyrillic-ext_cyrillic-600.ttf') format('truetype'), url('../fonts/open-sans-v34-vietnamese_latin-ext_latin_hebrew_greek-ext_greek_cyrillic-ext_cyrillic-600.svg#OpenSans') format('svg');
+}
+
+@font-face {
+	font-display: swap;
+	font-family: 'Open Sans';
+	font-style: normal;
+	font-weight: 700;
+	src: url('../fonts/open-sans-v34-vietnamese_latin-ext_latin_hebrew_greek-ext_greek_cyrillic-ext_cyrillic-700.eot');
+	src: url('../fonts/open-sans-v34-vietnamese_latin-ext_latin_hebrew_greek-ext_greek_cyrillic-ext_cyrillic-700.eot?#iefix') format('embedded-opentype'), url('../fonts/open-sans-v34-vietnamese_latin-ext_latin_hebrew_greek-ext_greek_cyrillic-ext_cyrillic-700.woff2') format('woff2'), url('../fonts/open-sans-v34-vietnamese_latin-ext_latin_hebrew_greek-ext_greek_cyrillic-ext_cyrillic-700.woff') format('woff'), url('../fonts/open-sans-v34-vietnamese_latin-ext_latin_hebrew_greek-ext_greek_cyrillic-ext_cyrillic-700.ttf') format('truetype'), url('../fonts/open-sans-v34-vietnamese_latin-ext_latin_hebrew_greek-ext_greek_cyrillic-ext_cyrillic-700.svg#OpenSans') format('svg');
+}
+
+@font-face {
+	font-display: swap;
+	font-family: 'Open Sans';
+	font-style: normal;
+	font-weight: 800;
+	src: url('../fonts/open-sans-v34-vietnamese_latin-ext_latin_hebrew_greek-ext_greek_cyrillic-ext_cyrillic-800.eot');
+	src: url('../fonts/open-sans-v34-vietnamese_latin-ext_latin_hebrew_greek-ext_greek_cyrillic-ext_cyrillic-800.eot?#iefix') format('embedded-opentype'), url('../fonts/open-sans-v34-vietnamese_latin-ext_latin_hebrew_greek-ext_greek_cyrillic-ext_cyrillic-800.woff2') format('woff2'), url('../fonts/open-sans-v34-vietnamese_latin-ext_latin_hebrew_greek-ext_greek_cyrillic-ext_cyrillic-800.woff') format('woff'), url('../fonts/open-sans-v34-vietnamese_latin-ext_latin_hebrew_greek-ext_greek_cyrillic-ext_cyrillic-800.ttf') format('truetype'), url('../fonts/open-sans-v34-vietnamese_latin-ext_latin_hebrew_greek-ext_greek_cyrillic-ext_cyrillic-800.svg#OpenSans') format('svg');
+}
+
+/* Strong overrides for brand buttons in light theme to ensure readability */
+html.theme-light .button {
+	/* neutral surface so brand dark gradients don't hide text */
+	background-image: none !important;
+	background: linear-gradient(135deg, #ffffff 0%, #f7f7f7 100%) !important;
+	color: #0b0b0b !important;
+	border: 1px solid rgba(0, 0, 0, 0.06) !important;
+	box-shadow: 0 8px 24px rgba(0, 0, 0, 0.04) !important;
+}
+
+/* keep a subtle brand accent: small left dot using brand variable when available */
+html.theme-light .button[class*="button-"] {
+	position: relative;
+}
+
+html.theme-light .button[class*="button-"]::before {
+	content: '';
+	position: absolute;
+	left: 0.5rem;
+	top: 50%;
+	transform: translateY(-50%);
+	width: 8px;
+	height: 8px;
+	border-radius: 50%;
+	background: var(--button-background, transparent);
+	box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.03) inset;
+	opacity: 0.95;
+}
+
+/* Ensure icons are visible and not inverted */
+html.theme-light .button .icon {
+	filter: none !important;
+	mix-blend-mode: normal !important;
+	opacity: 1 !important;
+	filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.06));
+}
+
+/* Make hovered state slightly darker to indicate affordance */
+html.theme-light .button:hover {
+	background: linear-gradient(135deg, #fafafa 0%, #efefef 100%) !important;
+	transform: translateY(-2px);
+}
+
+/* If a brand explicitly defines a very light text color, override to ensure contrast */
+html.theme-light .button[style],
+html.theme-light .button[class] {
+	color: #0b0b0b !important;
+}
+
+/* Focus state for keyboard users */
+html.theme-light .button:focus {
+	outline: 3px solid rgba(127, 29, 29, 0.12);
+	outline-offset: 4px;
+}
+
+/* Share Button - Bolinha Pequena */
+.share-btn {
+	position: fixed;
+	top: 20px;
+	left: 20px;
+	width: 36px;
+	height: 36px;
+	border-radius: 50%;
+	background: rgba(255, 255, 255, 0.08);
+	border: 1px solid rgba(255, 255, 255, 0.15);
+	color: var(--text-primary);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+	z-index: 100;
+	transition: all 0.3s ease;
+	backdrop-filter: blur(8px);
+	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.share-btn svg {
+	width: 18px;
+	height: 18px;
+	transition: transform 0.3s ease;
+}
+
+.share-btn:hover {
+	background: var(--accent-color);
+	border-color: var(--accent-color);
+	box-shadow: 0 0 20px var(--accent-glow);
+	transform: scale(1.15);
+}
+
+.share-btn:hover svg {
+	transform: rotate(15deg);
+}
+
+/* Loader */
+.loader {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: linear-gradient(135deg, var(--bg-gradient-start) 0%, var(--bg-gradient-end) 100%);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	z-index: 9999;
+	transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+.loader-spinner {
+	width: 60px;
+	height: 60px;
+	border: 4px solid rgba(255, 255, 255, 0.1);
+	border-top: 4px solid var(--accent-color);
+	border-radius: 50%;
+	animation: loaderSpin 0.8s linear infinite;
+	box-shadow: 0 0 20px var(--accent-glow);
+}
+
+@keyframes loaderSpin {
+	0% {
+		transform: rotate(0deg);
+	}
+
+	100% {
+		transform: rotate(360deg);
+	}
+}
+
+.loader-hidden {
+	opacity: 0;
+	visibility: hidden;
+}
+
+html.theme-light .loader {
+	background: linear-gradient(135deg, #ffffff 0%, #f5f5f5 100%);
+}
+
+html.theme-light .loader-spinner {
+	border: 4px solid rgba(0, 0, 0, 0.1);
+	border-top: 4px solid var(--accent-color);
+	box-shadow: 0 0 20px rgba(127, 29, 29, 0.2);
+}
+
+/* Share Button Overrides */
+.share-btn {
+	min-height: 36px !important;
+	padding: 0 !important;
+	margin: 0 !important;
+	width: 36px !important;
+	height: 36px !important;
+}
+
+/* Profile Section Updates */
+.profile-header {
+	margin-bottom: 2rem;
+}
+
+.profile-subtitle {
+	font-size: 0.875rem;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	color: var(--text-secondary);
+	margin-bottom: 0.5rem;
+	opacity: 0.8;
+	font-weight: 600;
+}
+
+.profile-bio {
+	font-size: 1rem;
+	line-height: 1.6;
+	color: var(--text-secondary);
+	max-width: 400px;
+	margin: 1.5rem auto 2.5rem auto;
+	opacity: 0.9;
+	text-align: center !important;
+}
+
+.profile-section-wrapper {
+	position: relative;
+	margin-bottom: 1rem;
+}
+
+.profile-cover {
+	width: 100%;
+	height: 180px;
+	background-size: cover;
+	background-position: center;
+	border-radius: 1.5rem 1.5rem 0 0;
+	/* Rounded top corners */
+	margin-bottom: -60px;
+	/* Pull avatar up */
+	position: relative;
+	z-index: 0;
+}
+
+/* Adjust avatar to overlap cover */
+.avatar {
+	position: relative;
+	z-index: 1;
+	border: 4px solid var(--glass-bg);
+	/* Add border to separate from cover */
+	margin-bottom: 1rem;
+	/* Adjust margin */
+}
+
+/* Thought Bubble */
+.thought-bubble {
+	position: absolute;
+	top: 140px;
+	/* Adjust based on cover height */
+	right: 10%;
+	/* Position to the right of avatar */
+	background: rgba(30, 30, 30, 0.9);
+	color: #e0e0e0;
+	padding: 0.8rem 1.2rem;
+	border-radius: 20px;
+	font-size: 0.9rem;
+	font-weight: 600;
+	z-index: 2;
+	box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+	animation: floatBubble 3s ease-in-out infinite;
+	max-width: 150px;
+}
+
+/* Bubble Tail */
+.thought-bubble::after {
+	content: '';
+	position: absolute;
+	left: -8px;
+	top: 50%;
+	transform: translateY(-50%);
+	border-width: 8px 8px 8px 0;
+	border-style: solid;
+	border-color: transparent rgba(30, 30, 30, 0.9) transparent transparent;
+}
+
+@keyframes floatBubble {
+
+	0%,
+	100% {
+		transform: translateY(0);
+	}
+
+	50% {
+		transform: translateY(-5px);
+	}
+}
+
+/* Override Container Padding */
+.container {
+	padding-top: 2rem !important;
+	overflow: visible !important;
+}
